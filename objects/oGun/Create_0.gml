@@ -1,2 +1,2 @@
 /// @description desc
-draw_self();
+delay = 20;
