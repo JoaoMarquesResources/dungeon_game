@@ -1,5 +1,7 @@
 /// @description desc
-walkspd = 2;
+state = "idle";
+
+walkspd = 1;
 velh = 0;
 velv = 0;
 
