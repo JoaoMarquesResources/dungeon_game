@@ -1,2 +1,2 @@
 /// @description desc
-GunCollision();
+image_speed = 0;

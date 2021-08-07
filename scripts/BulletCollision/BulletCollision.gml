@@ -1,14 +1,14 @@
 function BulletCollision()
 {
 	var _collision = false;
-	//Horizontal Tiles
-	if (tilemap_get_at_pixel(collisionMap, x, y)) //Se colidimos com a tile
+	// Horizontal Collision
+	if (tilemap_get_at_pixel(collisionMap, x, y))
 	{
 		instance_destroy();
 	}
-	
-	//Vertical Tiles
-	if (tilemap_get_at_pixel(collisionMap, x, y)) //Se colidimos com a tile
+			
+	// Vertical Collision
+	if (tilemap_get_at_pixel(collisionMap, x, y))
 	{
 		instance_destroy();
 	}

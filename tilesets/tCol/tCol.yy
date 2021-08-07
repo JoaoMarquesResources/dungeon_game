@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWall",
-    "path": "sprites/sWall/sWall.yy",
+    "name": "sCol",
+    "path": "sprites/sCol/sCol.yy",
   },
   "tileWidth": 8,
   "tileHeight": 8,
@@ -16,8 +16,8 @@
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
-  "out_columns": 3,
-  "tile_count": 8,
+  "out_columns": 1,
+  "tile_count": 2,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -25,12 +25,6 @@
     "FrameData": [
       0,
       1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
     ],
     "SerialiseFrameCount": 1,
   },

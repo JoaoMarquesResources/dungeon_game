@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_pixel_perfect_camera",
+  "name": "PixelPerfectCamera",
   "tags": [],
   "resourceType": "GMScript",
 }
