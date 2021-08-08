@@ -3,6 +3,8 @@ walkspd = 1;
 velh = 0;
 velv = 0;
 
+damage = 5;
+
 global.abrirChest = false;
 global.abrirMimicChest = false;
 
