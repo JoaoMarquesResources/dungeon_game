@@ -27,6 +27,7 @@
     {"id":{"name":"TileMap","path":"sprites/TileMap/TileMap.yy",},"order":3,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":4,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":1,},
+    {"id":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"order":0,},
     {"id":{"name":"sBulletParticle","path":"sprites/sBulletParticle/sBulletParticle.yy",},"order":3,},
     {"id":{"name":"sCol","path":"sprites/sCol/sCol.yy",},"order":8,},
     {"id":{"name":"sGun","path":"sprites/sGun/sGun.yy",},"order":1,},
@@ -67,6 +68,7 @@
     {"folderPath":"folders/Objects/Player.yy","order":7,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Chest.yy","order":7,"resourceVersion":"1.0","name":"Chest","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Chests.yy","order":12,"resourceVersion":"1.0","name":"Chests","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Entities.yy","order":14,"resourceVersion":"1.0","name":"Entities","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

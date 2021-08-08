@@ -29,7 +29,7 @@ switch (state)
 		if (instance_exists(oPlayer))
 		{
 			delay--;
-			var dir = point_direction(x, y, oPlayer.x, oPlayer.y - oPlayer.sprite_height / 2);
+			var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
 			var dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
 			velh = lengthdir_x(0.5, dir);
 			velv = lengthdir_y(0.5, dir);
@@ -43,20 +43,21 @@ switch (state)
 				delay = 30;
 			}
 			
-			if (velh != 0 || oPlayer.velh != 0) image_xscale = sign(velh);
+			if (velh != 0 && oPlayer.velh != 0) image_xscale = sign(velh);
 			
 			//state == dead
 			if (hp <= 0) state = "dead";
 			
-			//state == knockback
+			
 		}
 		break;
-		
-	case "knockback":
-		var dir = point_direction(x, y, oPlayer.x, oPlayer.y - oPlayer.sprite_height / 2);
+		//ELE TEM DE IR PARA O STATE DE KNOCKBACK E DEPOIS ADICIONA UM SHADER SECALHAR E YA
+		//E O KNOCKBACK TA UMA PILA
+	case "hurt":
+		var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
 		if (!stopDamage) hp -= oPlayer.damage;
-		x += -lengthdir_x(8, dir);
-		y += -lengthdir_y(8, dir);
+		x += lengthdir_x(1, dir);
+		y += lengthdir_y(1, dir);
 		state = "chase";
 		stopDamage = true;
 		break;
@@ -65,4 +66,4 @@ switch (state)
 		instance_destroy();
 		break;
 }
-show_debug_message(state);
+//show_debug_message(state);
