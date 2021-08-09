@@ -29,10 +29,19 @@ switch (state)
 		if (instance_exists(oPlayer))
 		{
 			delay--;
-			var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
-			var dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
-			velh = lengthdir_x(0.5, dir);
-			velv = lengthdir_y(0.5, dir);
+			var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
+			if (dist > enemyAggroRadius)
+			{
+				var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
+				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
+				velh = lengthdir_x(0.5, dir);
+				velv = lengthdir_y(0.5, dir);
+			}
+			else
+			{
+				velh = 0;
+				velv = 0;
+			}
 		
 			if (delay == 0)
 			{
@@ -47,19 +56,18 @@ switch (state)
 			
 			//state == dead
 			if (hp <= 0) state = "dead";
-			
-			
+		}
+		else
+		{
+			velh = 0;
+			velv = 0;
 		}
 		break;
 		//ELE TEM DE IR PARA O STATE DE KNOCKBACK E DEPOIS ADICIONA UM SHADER SECALHAR E YA
 		//E O KNOCKBACK TA UMA PILA
 	case "hurt":
-		var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
-		if (!stopDamage) hp -= oPlayer.damage;
-		x += lengthdir_x(1, dir);
-		y += lengthdir_y(1, dir);
+
 		state = "chase";
-		stopDamage = true;
 		break;
 		
 	case "dead":

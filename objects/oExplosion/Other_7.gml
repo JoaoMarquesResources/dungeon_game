@@ -1,2 +1,2 @@
 /// @description desc
-delay = 20;
+instance_destroy();

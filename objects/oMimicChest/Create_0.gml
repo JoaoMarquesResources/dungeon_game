@@ -4,12 +4,9 @@ global.atingirMimicChest = false;
 velh = 0;
 velv = 0;
 
+dirTiro = 0;
+
 delay = 30;
-stopDamage = false;
-
-hp = 25;
-damage = 5;
-
 
 state = "normal";
 

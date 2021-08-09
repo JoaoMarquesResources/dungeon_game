@@ -1,7 +1,9 @@
 {
   "resources": [
     {"id":{"name":"sMimicChestChasing","path":"sprites/sMimicChestChasing/sMimicChestChasing.yy",},"order":3,},
+    {"id":{"name":"sExplosionPLayer","path":"sprites/sExplosionPLayer/sExplosionPLayer.yy",},"order":4,},
     {"id":{"name":"BulletsCollision","path":"scripts/BulletsCollision/BulletsCollision.yy",},"order":2,},
+    {"id":{"name":"oPlayerExplosion","path":"objects/oPlayerExplosion/oPlayerExplosion.yy",},"order":4,},
     {"id":{"name":"oMimicChest","path":"objects/oMimicChest/oMimicChest.yy",},"order":1,},
     {"id":{"name":"PlayerCollision","path":"scripts/PlayerCollision/PlayerCollision.yy",},"order":0,},
     {"id":{"name":"PixelPerfectCamera","path":"scripts/PixelPerfectCamera/PixelPerfectCamera.yy",},"order":1,},
@@ -23,9 +25,11 @@
     {"id":{"name":"MimicCollision","path":"scripts/MimicCollision/MimicCollision.yy",},"order":3,},
     {"id":{"name":"tMap","path":"tilesets/tMap/tMap.yy",},"order":1,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":10,},
+    {"id":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},"order":1,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":2,},
     {"id":{"name":"TileMap","path":"sprites/TileMap/TileMap.yy",},"order":3,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":4,},
+    {"id":{"name":"Explosion","path":"sprites/Explosion/Explosion.yy",},"order":4,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":1,},
     {"id":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"order":0,},
     {"id":{"name":"sBulletParticle","path":"sprites/sBulletParticle/sBulletParticle.yy",},"order":3,},
