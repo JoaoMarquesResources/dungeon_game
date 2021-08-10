@@ -17,7 +17,7 @@ if (window_get_width() != global.gameWidht*global.zoom
 	surface_resize(application_surface, global.gameWidht*global.resolution, global.gameHeight*global.resolution)
 	display_set_gui_size(global.gameWidht, global.gameHeight);
 }
-/*
+
 //Update destination
 if (instance_exists(follow))
 {

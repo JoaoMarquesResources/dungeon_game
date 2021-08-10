@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "oThings",
+    "path": "folders/Objects/oThings.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCamera",

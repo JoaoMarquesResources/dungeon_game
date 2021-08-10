@@ -7,6 +7,7 @@ velv = 0;
 dirTiro = 0;
 
 delay = 30;
+goToChaseTimer = 30;
 
 state = "normal";
 

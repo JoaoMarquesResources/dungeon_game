@@ -28,9 +28,10 @@ switch (state)
 	
 		if (instance_exists(oPlayer))
 		{
+			goToChaseTimer--;
 			delay--;
 			var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
-			if (dist > enemyAggroRadius)
+			if (dist > enemyAggroRadius && goToChaseTimer <= 0)
 			{
 				var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
 				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
@@ -66,7 +67,7 @@ switch (state)
 		//ELE TEM DE IR PARA O STATE DE KNOCKBACK E DEPOIS ADICIONA UM SHADER SECALHAR E YA
 		//E O KNOCKBACK TA UMA PILA
 	case "hurt":
-
+		
 		state = "chase";
 		break;
 		
@@ -74,4 +75,3 @@ switch (state)
 		instance_destroy();
 		break;
 }
-//show_debug_message(state);
