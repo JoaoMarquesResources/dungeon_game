@@ -22,6 +22,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sMimicChest","path":"sprites/sMimicChest/sMimicChest.yy",},"order":1,},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},"order":0,},
+    {"id":{"name":"sLifeUI","path":"sprites/sLifeUI/sLifeUI.yy",},"order":5,},
     {"id":{"name":"oChestBullet","path":"objects/oChestBullet/oChestBullet.yy",},"order":1,},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},"order":0,},
     {"id":{"name":"MimicCollision","path":"scripts/MimicCollision/MimicCollision.yy",},"order":3,},

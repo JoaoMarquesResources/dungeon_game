@@ -1,7 +1,7 @@
 /// @description desc
 if (!view_enabled)
 {
-	view_set_wport(0, global.gameWidht);
+	view_set_wport(0, global.gameWidth);
 	view_set_hport(0, global.gameHeight);
 	view_set_visible(0, true);
 	camera_set_view_mat(camera, vm);
@@ -10,24 +10,13 @@ if (!view_enabled)
 	view_enabled = true;
 }
 
-if (window_get_width() != global.gameWidht*global.zoom
-&& window_get_height() != global.gameHeight*global.zoom)
+if (window_get_width() != global.gameWidth * global.zoom
+&&  window_get_height() != global.gameHeight * global.zoom)
 {
-	window_set_size(global.gameWidht*global.zoom, global.gameHeight*global.zoom);
-	surface_resize(application_surface, global.gameWidht*global.resolution, global.gameHeight*global.resolution)
-	display_set_gui_size(global.gameWidht, global.gameHeight);
+	window_set_size(global.gameWidth * global.zoom, global.gameHeight * global.zoom);
+	surface_resize(application_surface, global.gameWidth * global.resolution, global.gameHeight * global.resolution);
+	display_set_gui_size(global.gameWidth, global.gameHeight);
 }
-
-//Update destination
-if (instance_exists(follow))
-{
-	xTo = follow.x;
-	yTo = follow.y;
-}
-
-//update object position
-x += (xTo - x) / 15; //Seguir de forma smooth
-y += (yTo - y) / 15;
 
 //Keep Camera center inside room;
 x = clamp(x, viewWidHalf, room_width - viewWidHalf);

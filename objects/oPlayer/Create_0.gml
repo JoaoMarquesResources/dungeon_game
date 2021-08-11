@@ -3,6 +3,9 @@ walkspd = 1;
 velh = 0;
 velv = 0;
 
+global.PlayerHP = 5;
+global.PlayerHpMax = global.PlayerHP;
+
 global.abrirChest = false;
 global.abrirMimicChest = false;
 

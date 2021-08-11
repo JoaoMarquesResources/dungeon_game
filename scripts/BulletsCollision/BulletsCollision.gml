@@ -40,7 +40,8 @@ function ChestBulletCollision()
 	
 	if (instance_place(x, y, oPlayer))
 	{
-		oPlayer.hp -= 1;	
+		global.PlayerHP -= 1;
+		atingiuPlayer = true;
 		ScreenShake(2, 15)
 		instance_destroy();
 	}
