@@ -1,10 +1,8 @@
 /// @description desc
-global.atingirMimicChest = false;
-
 velh = 0;
 velv = 0;
 
-dirTiro = 0;
+dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
 
 delay = 30;
 goToChaseTimer = 30;
