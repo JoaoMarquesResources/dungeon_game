@@ -2,34 +2,31 @@ function PlayerCollision(){
 	
 	var _collision = false;
 	
-	// Horizontal tiles
-	if (tilemap_get_at_pixel(collisionMap, x + velh, y))
-	{
-		x -= x mod TILE_SIZE;
-		if (sign(velh) == 1) x += TILE_SIZE - 1;
+	// Horizontal Collision
+	if (place_meeting(x + velh, y, oWall)) {
+		repeat (abs(velh) + 1) {
+			if (place_meeting(x + sign(velh), y, oWall))
+			    break;
+			x += sign(velh);
+		}
 		velh = 0;
 		_collision = true;
 	}
-
+			
+			
 	x += velh;
-	
-	// Vertical tiles
-	if (tilemap_get_at_pixel(collisionMap, x, y + sign(velv) * 10) && velv == -1)
-	{
-		y -= y mod TILE_SIZE;
-		if (sign(velv) == 1) y += TILE_SIZE - 1;
+			
+	// Vertical Collision
+	if (place_meeting(x, y + velv, oWall)) {
+		repeat (abs(velv) + 1) {
+			if (place_meeting(x, y + sign(velv), oWall))
+			    break;
+			y += sign(velv);
+		}
 		velv = 0;
 		_collision = true;
 	}
-	
-	if (tilemap_get_at_pixel(collisionMap, x, y + velv) && velv == 1)
-	{
-		y -= y mod TILE_SIZE;
-		if (sign(velv) == 1) y += TILE_SIZE - 1;
-		velv = 0;
-		_collision = true;
-	}
-	
+			
 	y += velv;
 	
 	return _collision;

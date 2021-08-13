@@ -13,17 +13,20 @@ function BulletCollision()
 		instance_destroy();
 	}
 	
-	if (instance_place(x, y, pEnemy))
+	with (instance_place(x, y, pEnemy))
 	{
-		if (oMimicChest.state != "chase") global.atingirMimicChest = true;
-		oMimicChest.hp -= 1;
-		instance_destroy();
+		hp--;
+		if (object_index == oMimicChest)
+		{
+			if (oMimicChest.state != "chase") global.atingirMimicChest = true;
+		}
+		instance_destroy(other);
 	}
 	
 	return _collision;
 }
 
-function ChestBulletCollision()
+function EnemyBulletCollision()
 {
 	var _collision = false;
 	// Horizontal Collision
@@ -40,7 +43,6 @@ function ChestBulletCollision()
 	
 	if (instance_place(x, y, oPlayer))
 	{
-		global.PlayerHP -= 1;
 		atingiuPlayer = true;
 		ScreenShake(2, 15)
 		instance_destroy();

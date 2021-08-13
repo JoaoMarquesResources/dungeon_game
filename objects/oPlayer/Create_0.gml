@@ -3,6 +3,9 @@ walkspd = 1;
 velh = 0;
 velv = 0;
 
+invunerableTimer = 60;
+invunerable = false;
+
 global.PlayerHP = 5;
 global.PlayerHpMax = global.PlayerHP;
 

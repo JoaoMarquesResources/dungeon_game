@@ -19,4 +19,12 @@ if (global.PlayerHP <= 0)
 	instance_destroy();
 }
 
-show_debug_message(velv)
+if (invunerable)
+{
+	invunerableTimer--;
+	if (invunerableTimer == 0)
+	{
+		invunerableTimer = 60;
+		invunerable = false;
+	}
+}

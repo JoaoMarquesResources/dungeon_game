@@ -1,4 +1,4 @@
-function MimicCollision(){
+function EnemysCollision(){
 	
 	var _collision = false;
 	
