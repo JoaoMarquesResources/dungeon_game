@@ -22,7 +22,7 @@ switch(state)
 		
 			if (helpTimer)
 			{
-				timer = irandom_range(30, 90);
+				timer = irandom_range(60, 120);
 				//show_message(timer);
 				helpTimer = false;
 			}
