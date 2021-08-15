@@ -10,6 +10,8 @@ viewHeightHalf = camera_get_view_height(cam) * 0.5;
 xTo = xstart;
 yTo = ystart;
 
+global.DoScreenshake = true;
+
 shakeLength = 0;
 shakeMagnitude = 0;
 shakeRemain = 0;

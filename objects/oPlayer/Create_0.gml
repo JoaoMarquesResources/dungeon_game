@@ -3,8 +3,10 @@ walkspd = 1;
 velh = 0;
 velv = 0;
 
-invunerableTimer = 60;
-invunerable = false;
+global.invulnerable = 0;
+IsInvulnerable = false;
+flash = 0;
+//flashShader = shWhiteFlash;
 
 global.PlayerHP = 5;
 global.PlayerHpMax = global.PlayerHP;

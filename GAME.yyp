@@ -29,7 +29,7 @@
     {"id":{"name":"sLifeUI","path":"sprites/sLifeUI/sLifeUI.yy",},"order":5,},
     {"id":{"name":"oChestBullet","path":"objects/oChestBullet/oChestBullet.yy",},"order":1,},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},"order":0,},
-    {"id":{"name":"MimicCollision","path":"scripts/MimicCollision/MimicCollision.yy",},"order":3,},
+    {"id":{"name":"EnemysCollision","path":"scripts/EnemysCollision/EnemysCollision.yy",},"order":3,},
     {"id":{"name":"tMap","path":"tilesets/tMap/tMap.yy",},"order":1,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":10,},
     {"id":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},"order":1,},

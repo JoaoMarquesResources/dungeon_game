@@ -10,3 +10,6 @@ if (mouse_check_button(mb_left) && delay == 0)
 	
 	delay = 15;
 }
+
+global.invulnerable = max(global.invulnerable - 1, 0);
+flash = max(flash - 0.05, 0);

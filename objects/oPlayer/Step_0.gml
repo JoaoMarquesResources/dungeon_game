@@ -19,12 +19,5 @@ if (global.PlayerHP <= 0)
 	instance_destroy();
 }
 
-if (invunerable)
-{
-	invunerableTimer--;
-	if (invunerableTimer == 0)
-	{
-		invunerableTimer = 60;
-		invunerable = false;
-	}
-}
+global.invulnerable = max(global.invulnerable - 1, 0);
+flash = max(flash - 0.05, 0);
