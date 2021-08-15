@@ -32,7 +32,7 @@ switch (state)
 			delay--;
 			var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
 			dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y + 5);
-			if (dist > enemyAggroRadius && goToChaseTimer <= 0)
+			if (dist > radius && goToChaseTimer <= 0)
 			{
 				var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
 				velh = lengthdir_x(0.5, dir);

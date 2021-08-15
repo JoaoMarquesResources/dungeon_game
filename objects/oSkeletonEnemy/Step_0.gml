@@ -1,12 +1,26 @@
 /// @description desc
 switch(state)
 {
-	case "normal":
+	case "chase":
 		if (instance_exists(oPlayer))
 		{
 			//Shooting
 			//show_message(helpTimer);
 			timer--;
+			var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
+			if (dist > radius)
+			{
+				var dir = point_direction(x, y, oPlayer.x, oPlayer.y);
+				velh = lengthdir_x(0.2, dir);
+				velv = lengthdir_y(0.2, dir);
+			}
+			
+			if (timer <= 30)
+			{
+				velh = 0;
+				velv = 0;
+			}
+			
 			if (timer <= 0 && !helpTimer)
 			{
 				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y - 2);
@@ -22,8 +36,7 @@ switch(state)
 		
 			if (helpTimer)
 			{
-				timer = irandom_range(60, 120);
-				//show_message(timer);
+				timer = irandom_range(90, 135);
 				helpTimer = false;
 			}
 		

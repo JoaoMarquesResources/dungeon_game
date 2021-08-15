@@ -8,5 +8,3 @@ delay = 30;
 goToChaseTimer = 30;
 
 state = "normal";
-
-collisionMap = layer_tilemap_get_id(layer_get_id("Col"));

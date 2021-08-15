@@ -32,14 +32,14 @@
   ],
   "properties": [
     {"varType":0,"value":"0.75","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemySpeed","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"30","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"enemyAggroRadius","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"30","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"radius","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"hp","path":"objects/pEnemy/pEnemy.yy",},"objectId":{"name":"pEnemy","path":"objects/pEnemy/pEnemy.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Chests",
-    "path": "folders/Objects/Chests.yy",
+    "name": "Enemys",
+    "path": "folders/Objects/Enemys.yy",
   },
   "resourceVersion": "1.0",
   "name": "oMimicChest",

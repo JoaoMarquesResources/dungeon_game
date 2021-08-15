@@ -1,16 +1,11 @@
 function BulletCollision()
 {
 	var _collision = false;
-	// Horizontal Collision
-	if (tilemap_get_at_pixel(collisionMap, x, y))
+	
+	if (place_meeting(x, y, oWall))
 	{
 		instance_destroy();
-	}
-			
-	// Vertical Collision
-	if (tilemap_get_at_pixel(collisionMap, x, y))
-	{
-		instance_destroy();
+		_collision = true;
 	}
 	
 	with (instance_place(x, y, pEnemy))
@@ -29,16 +24,12 @@ function BulletCollision()
 function EnemyBulletCollision()
 {
 	var _collision = false;
+	
 	// Horizontal Collision
-	if (tilemap_get_at_pixel(collisionMap, x, y))
+	if (place_meeting(x, y, oWall))
 	{
 		instance_destroy();
-	}
-			
-	// Vertical Collision
-	if (tilemap_get_at_pixel(collisionMap, x, y))
-	{
-		instance_destroy();
+		_collision = true;
 	}
 	
 	if (instance_place(x, y, oPlayer))
