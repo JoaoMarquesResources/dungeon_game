@@ -43,19 +43,8 @@ function EnemyBulletCollision()
 	
 	if (instance_place(x, y, oPlayer))
 	{
-		atingiuPlayer = true;
-		with (oPlayer)
-		{
-			IsInvulnerable = true;
-			global.invulnerable = 120;
-			flash = 0.7;
-		}
-		
-		if (global.DoScreenshake && !oPlayer.IsInvulnerable)
-		{
-			global.PlayerHP -= 1;
-			ScreenShake(2, 15);
-		}
+		atingiuPlayer = true;		
+		HurtPlayer(1);
 		instance_destroy();
 	}
 	

@@ -30,11 +30,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Chests",
-    "path": "folders/Objects/Chests.yy",
+    "name": "Enemys",
+    "path": "folders/Objects/Enemys.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oChestBullet",
+  "name": "oEnemysBullets",
   "tags": [],
   "resourceType": "GMObject",
 }
