@@ -12,4 +12,7 @@ if (showUI)
 	with (oSquare){
 		draw_circle_color(x, y, radius, c_green, c_green, true);
 	}
+	with (oNormalEnemy){
+		draw_circle_color(x, y, radius, c_purple, c_purple, true);
+	}
 }
