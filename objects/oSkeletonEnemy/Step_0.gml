@@ -42,6 +42,11 @@ switch(state)
 		
 			if (hp <= 0) instance_destroy();
 		}
+		else
+		{
+			velh = 0;
+			velv = 0;
+		}
 		break;
 }
 

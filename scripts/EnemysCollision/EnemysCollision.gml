@@ -12,10 +12,9 @@ function EnemysCollision(){
 		velh = 0;
 		_collision = true;
 	}
-			
-			
+	
 	x += velh;
-			
+	
 	// Vertical Collision
 	if (place_meeting(x, y + velv, oWall)) {
 		repeat (abs(velv) + 1) {
@@ -26,8 +25,8 @@ function EnemysCollision(){
 		velv = 0;
 		_collision = true;
 	}
-			
-	y += velv;
 	
+	y += velv;
+
 	return _collision;
 }

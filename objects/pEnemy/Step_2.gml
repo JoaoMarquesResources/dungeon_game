@@ -1,2 +1,2 @@
 /// @description desc
-live = 0;
+EnemysCollision();
