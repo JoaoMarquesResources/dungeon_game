@@ -1,4 +1,6 @@
 /// @description desc
+event_inherited();
+
 state = "normal";
 
 velv = 0;
@@ -10,8 +12,3 @@ delay = 100;
 bulletLive = 50;
 shoot = false;
 bulletId = noone;
-timePassed = 0;
-wait = 0;
-waitDuraction = 30
-Choose = true;
-delayForWander = 30;

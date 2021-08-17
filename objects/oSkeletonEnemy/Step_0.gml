@@ -49,7 +49,3 @@ switch(state)
 		}
 		break;
 }
-
-show_debug_message(timer);
-show_debug_message(helpTimer);
-show_debug_message("------------------------------------------");

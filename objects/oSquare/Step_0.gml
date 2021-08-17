@@ -3,8 +3,6 @@ switch(state)
 {		
 	case "normal":
 		sprite_index = sSquareIdle;
-		
-		dist = point_distance(x, y, oPlayer.x, oPlayer.y);
 
 		if (instance_exists(oPlayer))
 		{
@@ -26,7 +24,7 @@ switch(state)
 			if (delay == 0)
 			{
 				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y + 4);
-				var _tiro = instance_create_layer(x, y - 10,  "Player", oSquareBullets);
+				var _tiro = instance_create_layer(x, y - 9,  "Player", oSquareBullets);
 				_tiro.speed = 0.8;
 				_tiro.direction = dirTiro;
 				_tiro.image_angle = _tiro.direction;
@@ -52,4 +50,3 @@ switch(state)
 		
 		break;
 }
-show_debug_message(bulletLive);
