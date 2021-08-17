@@ -6,10 +6,21 @@ switch (state)
 		
 		if (instance_exists(oPlayer))
 		{
-			dist = point_distance(x, y, oPlayer.x, oPlayer.y)
-			if (dist < radius)
+			dist = point_distance(x, y, oPlayer.x, oPlayer.y);
+			if (dist > radius)
+			{
+				var dir2 = point_direction(x, y, oPlayer.x, oPlayer.y);
+				velh = lengthdir_x(0.2, dir2);
+				velv = lengthdir_y(0.2, dir2);
+			}
+			else
 			{
 				state = "shooting";
+			}
+			
+			if (hp <= 0)
+			{
+				instance_destroy();
 			}
 		}
 		
@@ -18,15 +29,22 @@ switch (state)
 	case "shooting":
 		sprite_index = sNormalEnemyShooting;
 		
+		velh = 0;
+		velv = 0;
+		
 		if (instance_exists(oPlayer))
 		{
 			delayDeTiro--;
 			if (delayDeTiro <= 0)
 			{
 				delayEntreTiros--;
-				if (delayEntreTiros == 0)
+				if (dir)
 				{
 					dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y - 3);
+					dir = false;
+				}
+				if (delayEntreTiros == 0)
+				{
 					var _tiro = instance_create_layer(x, y - 3, "Player", oEnemysBullets);
 					_tiro.speed = 0.2;
 					_tiro.direction = dirTiro;
@@ -39,8 +57,14 @@ switch (state)
 					delayEntreTiros = 45;
 					delayDeTiro = 120;
 					tiros = 0;
+					dir = true;
 				}
 			}
+			
+			dist = point_distance(x, y, oPlayer.x, oPlayer.y);
+			if (dist > radius) state = "idle";
+			
+			if (hp <= 0) instance_destroy();
 		}
 		
 		break;

@@ -11,3 +11,4 @@ velv = 0;
 delayEntreTiros = 45;
 delayDeTiro = 0;
 tiros = 0;
+dir = true;

@@ -9,7 +9,9 @@ switch (state)
 	case "normal":
 		sprite_index = sMimicChest;
 		
-		if ((global.atingirMimicChest || keyboard_check_pressed(ord("E"))) && state != "chase")
+		if (place_meeting(x, y, oPlayer) && keyboard_check_pressed(ord("E"))) global.atingirMimicChest = true;
+		
+		if (global.atingirMimicChest && state != "chase")
 		{
 			for (var i = 0; i <= 360; i += 45)
 			{

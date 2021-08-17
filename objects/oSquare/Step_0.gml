@@ -11,6 +11,8 @@ switch(state)
 			{
 				state = "attack";
 			}
+			
+			if (hp <= 0) instance_destroy();
 		}
 		
 		break;
