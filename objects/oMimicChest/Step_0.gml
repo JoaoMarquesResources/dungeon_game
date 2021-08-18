@@ -16,7 +16,7 @@ switch (state)
 			for (var i = 0; i <= 360; i += 45)
 			{
 				var _tiro = instance_create_layer(x, y - sprite_height / 2,  "Player", oEnemysBullets);
-				_tiro.speed = 2.5;
+				_tiro.speed = 2;
 				_tiro.direction = i;
 				_tiro.image_angle = i;
 			}
@@ -49,7 +49,7 @@ switch (state)
 			if (delay == 0)
 			{
 				var _tiro = instance_create_layer(x, y - sprite_height / 2,  "Player", oEnemysBullets);
-				_tiro.speed = 2.5;
+				_tiro.speed = 2;
 				_tiro.direction = dirTiro;
 				_tiro.image_angle = _tiro.direction;
 				delay = 30;

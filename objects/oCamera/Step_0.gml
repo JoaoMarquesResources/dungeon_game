@@ -1,4 +1,5 @@
 /// @description desc
+//Update destination
 if (!view_enabled)
 {
 	view_set_wport(0, global.gameWidth);

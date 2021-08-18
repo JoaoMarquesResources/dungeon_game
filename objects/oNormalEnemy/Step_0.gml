@@ -55,7 +55,7 @@ switch (state)
 				if (tiros == 3)
 				{
 					delayEntreTiros = 45;
-					delayDeTiro = 120;
+					delayDeTiro = 60;
 					tiros = 0;
 					dir = true;
 				}
