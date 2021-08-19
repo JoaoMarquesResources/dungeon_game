@@ -69,6 +69,3 @@ switch (state)
 		
 		break;
 }
-show_debug_message(tiros);
-show_debug_message(delayEntreTiros);
-show_debug_message(delayDeTiro);

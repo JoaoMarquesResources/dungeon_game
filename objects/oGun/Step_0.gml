@@ -1,7 +1,7 @@
 /// @description desc
 if (delay > 0) delay--;
 
-if (mouse_check_button(mb_left) && delay == 0)
+if (mouse_check_button(mb_left) && delay == 0 && oPlayer.state != "rolling")
 {
 	var _tiro = instance_create_layer(x + lengthdir_x(4, image_angle), y + lengthdir_y(4, image_angle), "Gun", oBullet);
 	_tiro.speed = 2.25;

@@ -32,7 +32,7 @@ function EnemyBulletCollision()
 		_collision = true;
 	}
 	
-	if (instance_place(x, y, oPlayer))
+	if (instance_place(x, y, oPlayer) && oPlayer.state != "rolling")
 	{
 		atingiuPlayer = true;		
 		HurtPlayer(1);
