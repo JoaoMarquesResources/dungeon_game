@@ -17,13 +17,16 @@ switch (state)
 		
 		velh = (right - left) * walkspd;
 		velv = (down - up) * walkspd;
+		
+		if (velv == 0 && velh == 0) rolling = false;
+		else rolling = true;
 
 		if (velh != 0) image_xscale = -sign(velh);
 
 		if (chest && place_meeting(x, y, oChest)) global.abrirChest = true;
 		if (chest && place_meeting(x, y, oMimicChest)) global.abrirMimicChest = true;
 		
-		if (roll && rolling && rollDelay2 <= 0)
+		if (roll && rolling && rollDelay2 <= 0 && rolling)
 		{
 			inputDirection = point_direction(0, 0, right - left, down - up); //Retorna os graus (dir = 0; esq = 180; up = 90; down = 270 etc);
 			state = "rolling";

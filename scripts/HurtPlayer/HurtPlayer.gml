@@ -10,7 +10,7 @@ function HurtPlayer(_damage)
 		{
 			with (oPlayer)
 			{
-				ScreenShake(3, 10);
+				ScreenShake(3, 8);
 				flash = 0;
 				invulnerable = 60;
 			}
