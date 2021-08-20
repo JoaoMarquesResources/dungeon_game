@@ -1,0 +1,1 @@
+/// @description Alguma coisa que seja preciso resetar sempre que abro nova room

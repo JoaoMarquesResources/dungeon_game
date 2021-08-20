@@ -3,6 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
+entityFragmentCount = irandom_range(0, 2);
+
 state = "chase";
 timer = 30;
 helpTimer = false;

@@ -47,10 +47,8 @@ switch (state)
 		if (rollDelay == 0)
 		{
 			state = "normal";
-			rollDelay = 20;
+			rollDelay = 25;
 		}
 		
 		break;
 }
-show_debug_message(image_angle);
-show_debug_message(direction);

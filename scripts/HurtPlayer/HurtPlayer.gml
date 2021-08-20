@@ -26,8 +26,8 @@ function HurtPlayer(_damage)
 			//kill the player
 			with (oPlayer) 
 			{
-				instance_destroy(oGun);
-				instance_destroy();
+				//instance_destroy(oGun);
+				//instance_destroy();
 			}
 		}
 	}

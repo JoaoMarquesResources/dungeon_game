@@ -5,6 +5,8 @@ event_inherited();
 
 state = "idle";
 
+entityFragmentCount = irandom_range(0, 1);
+
 velh = 0;
 velv = 0;
 

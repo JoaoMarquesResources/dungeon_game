@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Enemys",
+    "path": "folders/Objects/Enemys.yy",
   },
   "resourceVersion": "1.0",
   "name": "oExplosion",

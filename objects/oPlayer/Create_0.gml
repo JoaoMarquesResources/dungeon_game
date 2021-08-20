@@ -4,7 +4,7 @@ state = "normal";
 walkspd = 1;
 
 rollspd = 1.25;
-rollDelay = 20;
+rollDelay = 25;
 rollDelay2 = 0;
 rolling = true;
 
@@ -17,8 +17,9 @@ invulnerable = 0;
 IsInvulnerable = false;
 flash = 0;
 
-global.PlayerHP = 15;
+global.PlayerHP = 5;
 global.PlayerHpMax = global.PlayerHP;
+global.playerMoney = 0;
 
 global.abrirChest = false;
 global.abrirMimicChest = false;
