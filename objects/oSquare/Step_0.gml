@@ -33,7 +33,6 @@ switch(state)
 				bulletId = _tiro.id;				
 				shoot = true;
 				delay = 90;
-				
 			}
 			
 			if (shoot)

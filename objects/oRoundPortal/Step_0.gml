@@ -1,10 +1,12 @@
 /// @description desc
 delay--;
 
-if (delay == 0)
+if (image_index == 4 && delay != 0)
 {
-	image_index = 4;
-	image_speed = 1;
+	image_speed = 0;
 }
 
-show_debug_message(image_index);
+if (delay == 0)
+{
+	image_speed = 1;
+}

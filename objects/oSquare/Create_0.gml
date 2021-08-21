@@ -11,6 +11,6 @@ entityFragmentCount = irandom_range(3, 5);
 dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y - 2);
 
 delay = 100;
-bulletLive = 50;
+bulletLive = 60;
 shoot = false;
 bulletId = noone;
