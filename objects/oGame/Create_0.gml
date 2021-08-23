@@ -1,6 +1,10 @@
 /// @description desc
 global.iCamera = instance_create_layer(0, 0, layer, oCamera);
 
+global.createEnemys = false;
+StopEnemysAppearingAnim = true;
+yes = false;
+
 atingiuPlayer = false;
 
 showUI = false;
@@ -9,7 +13,6 @@ global.RoomEnemys = instance_number(pEnemy);
 delayToCreatePortal = 120;
 PortalCreate = false;
 
-CurrentRound = 1;
 NextLayout = false;
 
 LayoutList = ds_list_create();
@@ -28,8 +31,6 @@ enum layout
 }
 state = layout.ChooseRandom;
 delay = 0;
+DelayForNextLayout = 120;
 
-layout1 = R1_layout_1;
-layout2 = R1_layout_2;
-random_layout = noone;
 choose_layout = true;

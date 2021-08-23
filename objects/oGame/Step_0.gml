@@ -1,4 +1,6 @@
 /// @description desc
+show_debug_overlay(true);
+
 global.RoomEnemys = instance_number(pEnemy);
 
 if (global.RoomEnemys == 0 && PortalCreate)
@@ -48,99 +50,188 @@ switch (state)
 		break;
 		
 	case layout.l_1:
-	
 		listValue = layout.l_1;
 		
 		if (choose_layout)
 		{
-			instance_create_layer(32, 48, "Enemys", oNormalEnemy);
-			//instance_create_layer(56, 56, "Enemys", oNormalEnemy);
-			//instance_create_layer(80, 64, "Enemys", oNormalEnemy);
-			//instance_create_layer(104, 56, "Enemys", oNormalEnemy);
-			//instance_create_layer(128, 48, "Enemys", oNormalEnemy);
-			show_message("CRIA ENEMYS");
-			delay = 30;
-			choose_layout = false;
+			if (StopEnemysAppearingAnim)
+			{
+				instance_create_layer(32, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(56, 56, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(80, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(104, 56, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(128, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				StopEnemysAppearingAnim = false;
+			}
+			
+			if (global.createEnemys)
+			{
+				instance_create_layer(32, 48, "Enemys", oNormalEnemy);
+				//instance_create_layer(56, 56, "Enemys", oNormalEnemy);
+				//instance_create_layer(80, 64, "Enemys", oNormalEnemy);
+				//instance_create_layer(104, 56, "Enemys", oNormalEnemy);
+				//instance_create_layer(128, 48, "Enemys", oNormalEnemy);
+				show_message("CRIOU")
+				delay = 30;
+				global.createEnemys = false;
+			}
+			
+			if (oEnemysAppearing.changeVariables)
+			{
+				global.createEnemys = true;
+				oEnemysAppearing.changeVariables = false;
+			}
 		}
 		delay--;
-		if (delay == 0) NextLayout = true;
+		if (delay == 0)
+		{
+			choose_layout = false;
+			StopEnemysAppearingAnim = true;
+			NextLayout = true;
+		}
 		
 		if (global.RoomEnemys == 0 && NextLayout)
 		{
-			//ds_list_delete(LayoutList, layout.l_1);
-			//if (ds_list_size(LayoutList) == 1) ds_list_destroy(LayoutList);
-			LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			DelayForNextLayout--;
 			
-			show_message(string(LayoutChoosed) + "layout.l_1");
+			if (DelayForNextLayout == 0)
+			{
+				pos = ds_list_find_index(LayoutList, listValue);
+				ds_list_delete(LayoutList, pos); //deleting the pos of this layout
 			
-			choose_layout = true;
-			NextLayout = false;
-			state = LayoutChoosed;
-			show_message("change layout");
+				LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			
+				show_message(string(LayoutChoosed) + "layout.l_1");
+			
+				choose_layout = true;
+				NextLayout = false;
+				state = LayoutChoosed;
+				show_message("change layout");
+				DelayForNextLayout = 120;
+			}
 		}
-		
 		break;
 		
 	case layout.l_2:
-		
 		listValue = layout.l_2;
 		
 		if (choose_layout)
 		{
-			instance_create_layer(24, 24, "Enemys", oNormalEnemy);
-			instance_create_layer(136, 24, "Enemys", oNormalEnemy);
-			instance_create_layer(48, 64, "Enemys", oSkeletonEnemy);
-			instance_create_layer(112, 64, "Enemys", oSkeletonEnemy);
-			show_message("CRIA ENEMYS");
-			delay = 30;
-			choose_layout = false;
+			if (StopEnemysAppearingAnim)
+			{
+				instance_create_layer(24, 24, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 24, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(48, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(112, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				StopEnemysAppearingAnim = false;
+			}
+			
+			if (global.createEnemys)
+			{
+				instance_create_layer(24, 24, "Enemys", oNormalEnemy);
+				instance_create_layer(136, 24, "Enemys", oNormalEnemy);
+				instance_create_layer(48, 64, "Enemys", oSkeletonEnemy);
+				instance_create_layer(112, 64, "Enemys", oSkeletonEnemy);
+				show_message("CRIOU")
+				delay = 30;
+				global.createEnemys = false;
+			}
+			
+			if (oEnemysAppearing.changeVariables)
+			{
+				global.createEnemys = true;
+				oEnemysAppearing.changeVariables = false;
+			}
 		}
 		delay--;
-		if (delay == 0) NextLayout = true;
+		if (delay == 0)
+		{
+			choose_layout = false;
+			StopEnemysAppearingAnim = true;
+			NextLayout = true;
+		}
 		
 		if (global.RoomEnemys == 0 && NextLayout)
 		{
-			//ds_list_delete(LayoutList, layout.l_2);
-			//if (ds_list_size(LayoutList) == 1) ds_list_destroy(LayoutList);
-			LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			DelayForNextLayout--;
 			
-			show_message(string(LayoutChoosed) + "layout.l_2");
+			if (DelayForNextLayout == 0)
+			{
+				pos = ds_list_find_index(LayoutList, listValue);
+				ds_list_delete(LayoutList, pos); //deleting the pos of this layout
 			
-			choose_layout = true;
-			NextLayout = false;
-			state = LayoutChoosed;
-			show_message("change layout");
+				LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			
+				show_message(string(LayoutChoosed) + "layout.l_2");
+			
+				choose_layout = true;
+				NextLayout = false;
+				state = LayoutChoosed;
+				show_message("change layout");
+				DelayForNextLayout = 120;
+			}
 		}
 		break;
 		
 	case layout.l_3:
-	
-		listValue = layout.l_2;
+		listValue = layout.l_3;
 	
 		if (choose_layout)
 		{
-			instance_create_layer(24, 56, "Enemys", oSkeletonEnemy);
-			instance_create_layer(80, 72, "Enemys", oSquare);
-			instance_create_layer(136, 56, "Enemys", oNormalEnemy);
-			delay = 30;
-			choose_layout = false;
+			if (StopEnemysAppearingAnim)
+			{
+				instance_create_layer(24, 56, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(80, 72, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 56, "EnemysAppearingAnim", oEnemysAppearing);
+				StopEnemysAppearingAnim = false;
+			}
+			
+			if (global.createEnemys)
+			{
+				instance_create_layer(24, 56, "Enemys", oSkeletonEnemy);
+				instance_create_layer(80, 72, "Enemys", oSquare);
+				instance_create_layer(136, 56, "Enemys", oNormalEnemy);
+				show_message("CRIOU")
+				delay = 30;
+				global.createEnemys = false;
+			}
+			
+			if (oEnemysAppearing.changeVariables)
+			{
+				global.createEnemys = true;
+				oEnemysAppearing.changeVariables = false;
+			}
 		}
 		delay--;
-		if (delay == 0) NextLayout = true;
+		if (delay == 0)
+		{
+			choose_layout = false;
+			StopEnemysAppearingAnim = true;
+			NextLayout = true;
+		}
 		
 		if (global.RoomEnemys == 0 && NextLayout)
 		{
-			//ds_list_delete(LayoutList, layout.l_3);
-			//if (ds_list_size(LayoutList) == 1) ds_list_destroy(LayoutList);
-			LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			DelayForNextLayout--;
 			
-			show_message(string(LayoutChoosed) + "layout.l_3");
+			if (DelayForNextLayout == 0)
+			{
+				pos = ds_list_find_index(LayoutList, listValue);
+				ds_list_delete(LayoutList, pos); //deleting the pos of this layout
 			
-			choose_layout = true;
-			NextLayout = false;
-			state = LayoutChoosed;
-			show_message("change layout");
+				LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			
+				show_message(string(LayoutChoosed) + "layout.l_3");
+			
+				choose_layout = true;
+				NextLayout = false;
+				state = LayoutChoosed;
+				show_message("change layout");
+				DelayForNextLayout = 120;
+			}
 		}
 		break;
 }
 show_debug_message(ds_list_size(LayoutList));
+show_debug_message(global.createEnemys);
+show_debug_message(StopEnemysAppearingAnim);
