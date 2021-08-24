@@ -6,7 +6,7 @@ event_inherited();
 entityFragmentCount = irandom_range(0, 2);
 
 state = "chase";
-timer = 30;
+timer = 60;
 helpTimer = false;
 
 velh = 0;

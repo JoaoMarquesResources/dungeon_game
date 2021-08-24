@@ -109,8 +109,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Chest",
-    "path": "folders/Sprites/Chest.yy",
+    "name": "Mimic",
+    "path": "folders/Sprites/Enemy/Mimic.yy",
   },
   "resourceVersion": "1.0",
   "name": "sMimicChestChasing",

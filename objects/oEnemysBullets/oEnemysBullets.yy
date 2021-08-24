@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sChestBullet",
-    "path": "sprites/sChestBullet/sChestBullet.yy",
+    "name": "sEnemysBullets",
+    "path": "sprites/sEnemysBullets/sEnemysBullets.yy",
   },
   "solid": false,
   "visible": true,
