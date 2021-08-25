@@ -1,6 +1,4 @@
 /// @description desc
-if (velh != 0) image_xscale = sign(velh);
-
 switch(state)
 {
 	case "chase":
@@ -28,7 +26,7 @@ switch(state)
 			{
 				sprite_index = sFlyEnemyShooting;
 				
-				if (sprite_index == sFlyEnemyShooting && image_index == 3) shoot = true;
+				if (sprite_index == sFlyEnemyShooting && image_index == 4) shoot = true;
 				
 				if (shoot)
 				{
@@ -47,6 +45,7 @@ switch(state)
 					shoot = false;
 				}
 			}
+			else sprite_index = sFlyEnemyIdle;
 		
 			if (helpTimer)
 			{
@@ -63,4 +62,5 @@ switch(state)
 		}
 		break;
 }
+if (velh != 0) image_xscale = sign(velh);
 show_debug_message("timer:	" + string(timer));

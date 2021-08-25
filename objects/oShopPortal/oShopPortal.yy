@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sRoundPortal",
-    "path": "sprites/sRoundPortal/sRoundPortal.yy",
+    "name": "sShopPortal",
+    "path": "sprites/sShopPortal/sShopPortal.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oRoundPortal",
+  "name": "oShopPortal",
   "tags": [],
   "resourceType": "GMObject",
 }

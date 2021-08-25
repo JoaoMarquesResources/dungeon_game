@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"sMimicChestChasing","path":"sprites/sMimicChestChasing/sMimicChestChasing.yy",},"order":1,},
     {"id":{"name":"sExplosionPLayer","path":"sprites/sExplosionPLayer/sExplosionPLayer.yy",},"order":4,},
-    {"id":{"name":"RoundPortal","path":"sprites/RoundPortal/RoundPortal.yy",},"order":12,},
+    {"id":{"name":"sRoundPortal","path":"sprites/sRoundPortal/sRoundPortal.yy",},"order":0,},
     {"id":{"name":"BulletsCollision","path":"scripts/BulletsCollision/BulletsCollision.yy",},"order":2,},
     {"id":{"name":"oSquareBullets","path":"objects/oSquareBullets/oSquareBullets.yy",},"order":1,},
     {"id":{"name":"oPlayerExplosion","path":"objects/oPlayerExplosion/oPlayerExplosion.yy",},"order":4,},
@@ -16,6 +16,7 @@
     {"id":{"name":"sEnemysBullets","path":"sprites/sEnemysBullets/sEnemysBullets.yy",},"order":7,},
     {"id":{"name":"Knockback","path":"scripts/Knockback/Knockback.yy",},"order":5,},
     {"id":{"name":"sFlyEnemyIdle","path":"sprites/sFlyEnemyIdle/sFlyEnemyIdle.yy",},"order":1,},
+    {"id":{"name":"sShopPortal","path":"sprites/sShopPortal/sShopPortal.yy",},"order":1,},
     {"id":{"name":"oSquare","path":"objects/oSquare/oSquare.yy",},"order":0,},
     {"id":{"name":"SpawnEnemysDelay_ETC","path":"scripts/SpawnEnemysDelay_ETC/SpawnEnemysDelay_ETC.yy",},"order":0,},
     {"id":{"name":"sSpark","path":"sprites/sSpark/sSpark.yy",},"order":2,},
@@ -47,6 +48,7 @@
     {"id":{"name":"sLifeUI","path":"sprites/sLifeUI/sLifeUI.yy",},"order":5,},
     {"id":{"name":"oEnemysBullets","path":"objects/oEnemysBullets/oEnemysBullets.yy",},"order":1,},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},"order":0,},
+    {"id":{"name":"oShopPortal","path":"objects/oShopPortal/oShopPortal.yy",},"order":19,},
     {"id":{"name":"fText","path":"fonts/fText/fText.yy",},"order":0,},
     {"id":{"name":"EnemysCollision","path":"scripts/EnemysCollision/EnemysCollision.yy",},"order":3,},
     {"id":{"name":"tMap","path":"tilesets/tMap/tMap.yy",},"order":1,},
@@ -124,6 +126,7 @@
     {"folderPath":"folders/Scripts/EnemysSpawner/ROUND 5.yy","order":5,"resourceVersion":"1.0","name":"ROUND 5","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Enemy/Mimic.yy","order":8,"resourceVersion":"1.0","name":"Mimic","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Enemy/FlyEnemy.yy","order":9,"resourceVersion":"1.0","name":"FlyEnemy","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Portal.yy","order":14,"resourceVersion":"1.0","name":"Portal","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

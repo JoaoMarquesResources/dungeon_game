@@ -23,7 +23,10 @@ switch (state)
 
 		if (velh != 0) image_xscale = -sign(velh);
 
-		if (chest && place_meeting(x, y, oChest)) global.abrirChest = true;
+		if (chest && place_meeting(x, y, oChest) && oChest.image_index == 0)
+		{
+			global.abrirChest = true;
+		}
 		if (chest && place_meeting(x, y, oMimicChest)) global.abrirMimicChest = true;
 		
 		if (roll && rolling && rollDelay2 <= 0 && rolling)

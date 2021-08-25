@@ -12,3 +12,7 @@ delay = 30;
 goToChaseTimer = 30;
 
 state = "normal";
+
+entityFragmentCount = irandom_range(5, 10);
+
+entityDropList = -1;

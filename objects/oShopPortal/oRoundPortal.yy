@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sRoundPortal",
-    "path": "sprites/sRoundPortal/sRoundPortal.yy",
+    "name": "RoundPortal",
+    "path": "sprites/RoundPortal/RoundPortal.yy",
   },
   "solid": false,
   "visible": true,

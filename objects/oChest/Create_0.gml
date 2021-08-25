@@ -1,4 +1,6 @@
 /// @description desc
 image_speed = 0;
 
-global.atingirMimicChest = false;
+entityDropList = -1;
+
+entityFragmentCount = irandom_range(5, 10);
