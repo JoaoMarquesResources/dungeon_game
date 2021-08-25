@@ -16,12 +16,12 @@ function SpawnEnemysDelay_ETC()
 			
 		if (DelayForNextLayout == 0)
 		{
-			pos = ds_list_find_index(LayoutList, listValue);
+			pos = ds_list_find_index(LayoutListRandom, listValue);
 			//show_message(listValue);
 			//show_message("elemina" + string(pos));
-			ds_list_delete(LayoutList, pos); //deleting the pos of this layout
+			ds_list_delete(LayoutListRandom, pos); //deleting the pos of this layout
 			
-			LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+			LayoutChoosed =	ds_list_find_value(LayoutListRandom, random(ds_list_size(LayoutListRandom)));
 			
 			//show_message("Layout choosed" + string(LayoutChoosed));
 			

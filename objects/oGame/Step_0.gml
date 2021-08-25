@@ -3,7 +3,7 @@ show_debug_overlay(true);
 
 global.RoomEnemys = instance_number(pEnemy);
 
-if (ds_list_size(LayoutList) == 0 && PortalCreateHelp = true)
+if (ds_list_size(LayoutListRandom) == 0 && PortalCreateHelp = true)
 {
 	PortalCreate = true;
 	PortalCreateHelp = false; //Tem de resetar no room start
@@ -28,7 +28,7 @@ switch (state)
 {
 	case layout.ChooseRandom:
 		
-		LayoutChoosed =	ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+		LayoutChoosed =	ds_list_find_value(LayoutListRandom, random(ds_list_size(LayoutListRandom)));
 		state = LayoutChoosed;
 		
 		break;
@@ -232,17 +232,23 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(32, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(80, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(32, 32, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(128, 32, "EnemysAppearingAnim", oEnemysAppearing);
 				instance_create_layer(128, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(32, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(72, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(88, 48, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(32, 64, "Enemys", oFlyEnemy);
-				instance_create_layer(80, 72, "Enemys", oFlyEnemy);
-				instance_create_layer(128, 64, "Enemys", oFlyEnemy);
+				instance_create_layer(32, 32, "Enemys", oNormalEnemy);
+				instance_create_layer(128, 32, "Enemys", oNormalEnemy);
+				instance_create_layer(128, 64, "Enemys", oNormalEnemy);
+				instance_create_layer(32, 64, "Enemys", oNormalEnemy);
+				instance_create_layer(72, 48, "Enemys", oSkeletonEnemy);
+				instance_create_layer(88, 48, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -260,7 +266,7 @@ switch (state)
 		SpawnEnemysDelay_ETC();
 		
 		break;
-		
+	/*	
 	case layout.l_7:
 		listValue = layout.l_7;
 	
@@ -296,7 +302,8 @@ switch (state)
 		SpawnEnemysDelay_ETC();
 		
 		break;
+	*/
 }
-show_debug_message(ds_list_size(LayoutList));
+show_debug_message(ds_list_size(LayoutListRandom));
 show_debug_message(global.createEnemys);
 show_debug_message(StopEnemysAppearingAnim);

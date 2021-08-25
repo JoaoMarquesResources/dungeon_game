@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Square",
-    "path": "folders/Objects/Enemys/Square.yy",
+    "path": "folders/Objects/Enemies/Square.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSquareBullets",

@@ -18,21 +18,22 @@ switch(state)
 		break;
 		
 	case "attack":
-	
 		delay--;
+		if (delay < 40 || delay > 90) sprite_index = sSquareShooting;
+		else sprite_index = sSquareIdle;
 		
 		if (instance_exists(oPlayer))
 		{
-			if (delay == 0)
+			if (delay <= 0)
 			{
 				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y + 4);
 				var _tiro = instance_create_layer(x, y - 9,  "Player", oSquareBullets);
 				_tiro.speed = 0.5;
 				_tiro.direction = dirTiro;
 				_tiro.image_angle = _tiro.direction;
-				bulletId = _tiro.id;				
+				bulletId = _tiro.id;
 				shoot = true;
-				delay = 90;
+				delay = random_range(100, 120);
 			}
 			
 			if (shoot)

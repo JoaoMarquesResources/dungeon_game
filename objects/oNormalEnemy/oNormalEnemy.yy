@@ -36,7 +36,7 @@
   ],
   "parent": {
     "name": "NormalEnemy",
-    "path": "folders/Objects/Enemys/NormalEnemy.yy",
+    "path": "folders/Objects/Enemies/NormalEnemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "oNormalEnemy",
