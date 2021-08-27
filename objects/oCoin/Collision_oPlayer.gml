@@ -1,3 +1,6 @@
 /// @description desc
-global.playerMoney++;
-instance_destroy();
+if (delay <= 0)
+{
+	global.playerMoney++;
+	instance_destroy();
+}

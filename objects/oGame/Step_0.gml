@@ -1,6 +1,5 @@
 /// @description desc
 show_debug_overlay(true);
-
 global.RoomEnemys = instance_number(pEnemy);
 
 if (ds_list_size(LayoutListRandom) == 0 && PortalCreateHelp = true)
@@ -23,6 +22,8 @@ if (global.RoomEnemys == 0 && PortalCreate)
 		PortalCreate = false;
 	}
 }
+
+
 
 switch (state)
 {
@@ -266,44 +267,92 @@ switch (state)
 		SpawnEnemysDelay_ETC();
 		
 		break;
-	/*	
-	case layout.l_7:
-		listValue = layout.l_7;
+}
+
+if (camera == 2)
+{
+	if (Choose)
+	{		
+		Choose = false;
+	}
 	
-		if (choose_layout)
-		{
-			if (StopEnemysAppearingAnim)
+	switch (state)
+	{
+		case layout.ChooseRandom:
+			show_message("choose random");
+			LayoutChoosed =	ds_list_find_value(LayoutListRandom, random(ds_list_size(LayoutListRandom)));
+			state = LayoutChoosed;
+		
+			break;
+		
+		case layout.l_7:
+			listValue = L7;
+	
+			if (choose_layout)
 			{
-				instance_create_layer(24, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(80, 40, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				StopEnemysAppearingAnim = false;
-			}
-			
-			if (global.createEnemys)
-			{
-				instance_create_layer(24, 64, "Enemys", oFlyEnemy);
-				instance_create_layer(80, 40, "Enemys", oFlyEnemy);
-				instance_create_layer(136, 64, "Enemys", oFlyEnemy);
-				delay = 30;
-				global.createEnemys = false;
-			}
-			
-			if (instance_exists(oEnemysAppearing))
-			{
-				if (oEnemysAppearing.changeVariables)
+				if (StopEnemysAppearingAnim)
 				{
-					global.createEnemys = true;
-					oEnemysAppearing.changeVariables = false;
+					instance_create_layer(80, 40, "EnemysAppearingAnim", oEnemysAppearing);
+					StopEnemysAppearingAnim = false;
+				}
+			
+				if (global.createEnemys)
+				{
+					instance_create_layer(80, 40, "Enemys", oFlyEnemy);
+					delay = 30;
+					global.createEnemys = false;
+				}
+			
+				if (instance_exists(oEnemysAppearing))
+				{
+					if (oEnemysAppearing.changeVariables)
+					{
+						global.createEnemys = true;
+						oEnemysAppearing.changeVariables = false;
+					}
 				}
 			}
-		}
 		
-		SpawnEnemysDelay_ETC();
+			SpawnEnemysDelay_ETC();
 		
-		break;
-	*/
+			break;
+			
+		case layout.l_8:
+			listValue = L8;
+	
+			if (choose_layout)
+			{
+				if (StopEnemysAppearingAnim)
+				{
+					instance_create_layer(80, 40, "EnemysAppearingAnim", oEnemysAppearing);
+					StopEnemysAppearingAnim = false;
+				}
+			
+				if (global.createEnemys)
+				{
+					instance_create_layer(80, 40, "Enemys", oNormalEnemy);
+					delay = 30;
+					global.createEnemys = false;
+				}
+			
+				if (instance_exists(oEnemysAppearing))
+				{
+					if (oEnemysAppearing.changeVariables)
+					{
+						global.createEnemys = true;
+						oEnemysAppearing.changeVariables = false;
+					}
+				}
+			}
+		
+			SpawnEnemysDelay_ETC();
+		
+			break;
+		
+		default: show_debug_message("state");
+	}
 }
-show_debug_message(ds_list_size(LayoutListRandom));
+show_debug_message("ds size" + string(ds_list_size(LayoutListRandom)));
 show_debug_message(global.createEnemys);
 show_debug_message(StopEnemysAppearingAnim);
+show_debug_message("camera: " + string(camera));

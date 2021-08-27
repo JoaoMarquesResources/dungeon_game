@@ -1,5 +1,6 @@
 /// @description desc
-/// @description desc
+delay--;
+
 //Bounce
 if (bounceCount != 0)
 {

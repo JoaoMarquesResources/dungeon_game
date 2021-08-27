@@ -8,6 +8,8 @@ image_speed = 0;
 image_index = irandom(image_number-1);
 image_xscale = choose(1, -1);
 
+delay = 30;
+
 invulnerable = 0;
 flash = 0;
 alpha = false;

@@ -47,14 +47,14 @@ switch (state)
 		
 			if (delay == 0)
 			{
-				if (oPlayer.velh != 0) var coisa = choose(0, oPlayer.image_xscale * random_range(20, 30));
+				if (oPlayer.velh != 0) var coisa = choose(0, oPlayer.image_xscale * random_range(20, 25));
 				else coisa = 0;
 				dirTiro = point_direction(x, y, oPlayer.x - coisa, oPlayer.y + 5);
 				var _tiro = instance_create_layer(x, y - sprite_height / 2,  "Player", oEnemysBullets);
 				_tiro.speed = random_range(1.4, 1.8);
 				_tiro.direction = dirTiro;
 				_tiro.image_angle = _tiro.direction;
-				delay = irandom_range(10, 50);
+				delay = irandom_range(10, 40);
 			}
 			
 			if (velh != 0 && oPlayer.velh != 0) image_xscale = sign(velh);

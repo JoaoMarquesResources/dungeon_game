@@ -40,6 +40,7 @@ switch(state)
 			{			
 				bulletLive--;
 			}
+			
 			if (bulletLive == 0)
 			{
 				instance_destroy(bulletId);

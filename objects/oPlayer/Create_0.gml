@@ -17,10 +17,6 @@ invulnerable = 0;
 IsInvulnerable = false;
 flash = 0;
 
-global.PlayerHP = 5;
-global.PlayerHpMax = global.PlayerHP;
-global.playerMoney = 0;
-
 global.abrirChest = false;
 global.abrirMimicChest = false;
 
