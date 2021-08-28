@@ -46,3 +46,6 @@ draw_text(xx, yy + 1, _str);
 draw_text(xx, yy - 1, _str);
 draw_set_color(c_white);
 draw_text(xx, yy, _str);
+
+//draw aim
+draw_sprite(sAim, 0, mouse_x, mouse_y);

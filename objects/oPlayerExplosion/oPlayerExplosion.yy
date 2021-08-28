@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sExplosionPLayer",
-    "path": "sprites/sExplosionPLayer/sExplosionPLayer.yy",
+    "name": "sExplosionPlayer",
+    "path": "sprites/sExplosionPlayer/sExplosionPlayer.yy",
   },
   "solid": false,
   "visible": true,

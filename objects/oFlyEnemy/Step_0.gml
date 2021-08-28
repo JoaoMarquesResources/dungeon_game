@@ -33,7 +33,7 @@ switch(state)
 					dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y - 2);
 				
 					//Random bullets number
-					var value = irandom_range(-2, -8);
+					var value = irandom_range(-2, -10);
 					for (var i = -value; i >= value; i--)
 					{
 						var _tiro = instance_create_layer(x + (sign(velh) * 5), y - 6,  "Player", oEnemysBullets);
