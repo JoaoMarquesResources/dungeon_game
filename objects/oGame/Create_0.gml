@@ -23,6 +23,7 @@ global.PlayerHpMax = global.PlayerHP;
 global.playerMoney = 0;
 
 camera = 0;
+Room = Camera1;
 
 listValue = noone;
 

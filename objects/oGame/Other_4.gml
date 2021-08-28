@@ -1,5 +1,8 @@
 /// @description Alguma coisa que seja preciso resetar sempre que abro nova room
 if (room != rShop) camera++;
+if (camera == 1) Room = Camera2; //room = goto
+if (camera == 2) Room = Camera3;
+//if (camera == 3) Room = Camera4;
 
 global.midTransition = false;
 global.createEnemys = false;
@@ -23,7 +26,10 @@ enum layout
 	l_8,
 	l_9,
 	l_10,
-	l_11
+	l_11,
+	l_12,
+	l_13,
+	l_14
 }
 
 //----------Camera 1----------
@@ -39,6 +45,10 @@ L8 = layout.l_8;
 L9 = layout.l_9;
 L10 = layout.l_10;
 L11 = layout.l_11;
+//----------Camera 3----------
+L12 = layout.l_12;
+L13 = layout.l_13;
+L14 = layout.l_14;
 
 NextLayout = false;
 state = layout.ChooseRandom;
@@ -52,6 +62,7 @@ if (camera == 1)
 	show_message("Camera 1");
 	LayoutList = ds_list_create();
 	LayoutListRandom = ds_list_create();
+
 
 	ds_list_add(LayoutList, L1);
 	ds_list_add(LayoutList, L2);
@@ -88,7 +99,32 @@ if (camera == 2)
 	ds_list_add(LayoutList, L11);
 	
 	//Escolher numero de layouts random
-	for (var i = 1; i <= irandom_range(4, 5); i++)
+	//irandom_range(4, 5)
+	for (var i = 1; i <= 0; i++)
+	{
+		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+		pos2 = ds_list_find_index(LayoutList, Layout);
+		show_message("Layout: " + string(Layout));
+		ds_list_delete(LayoutList, pos2);
+		ds_list_add(LayoutListRandom, Layout);
+	}
+}
+
+//CAMERA 3
+if (camera == 3)
+{
+	show_message("Camera 3");
+	ds_list_destroy(LayoutList);
+	ds_list_destroy(LayoutListRandom);
+	LayoutList = ds_list_create();
+	LayoutListRandom = ds_list_create();
+	
+	ds_list_add(LayoutList, L12);
+	ds_list_add(LayoutList, L13);
+	ds_list_add(LayoutList, L14);
+	
+	//Escolher numero de layouts random
+	for (var i = 1; i <= 3; i++)
 	{
 		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 		pos2 = ds_list_find_index(LayoutList, Layout);

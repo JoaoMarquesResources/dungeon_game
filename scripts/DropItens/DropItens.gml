@@ -12,7 +12,7 @@ function DropItems(x, y, itens){
 			with (instance_create_layer(x, y, "Enemys", itens[i]))
 			{
 				direction = _angle;
-				spd = 0.3 + (_items * 0.1) + random(0.1);
+				spd = 0.3 + (_items * 0.08) + random(0.08);
 			}
 			_angle += _anglePerItem;
 		}
