@@ -1,8 +1,10 @@
 /// @description Alguma coisa que seja preciso resetar sempre que abro nova room
+randomize();
+
 if (room != rShop) camera++;
 if (camera == 1) Room = Camera2; //room = goto
 if (camera == 2) Room = Camera3;
-//if (camera == 3) Room = Camera4;
+if (camera == 3) Room = Camera4;
 
 global.midTransition = false;
 global.createEnemys = false;
@@ -29,7 +31,14 @@ enum layout
 	l_11,
 	l_12,
 	l_13,
-	l_14
+	l_14,
+	l_15,
+	l_16,
+	l_17,
+	l_18,
+	l_19,
+	l_20,
+	l_21
 }
 
 //----------Camera 1----------
@@ -49,6 +58,14 @@ L11 = layout.l_11;
 L12 = layout.l_12;
 L13 = layout.l_13;
 L14 = layout.l_14;
+L15 = layout.l_15;
+//----------Camera 4----------
+L16 = layout.l_16;
+L17 = layout.l_17;
+L18 = layout.l_18;
+L19 = layout.l_19;
+L20 = layout.l_20;
+L21 = layout.l_21;
 
 NextLayout = false;
 state = layout.ChooseRandom;
@@ -73,7 +90,7 @@ if (camera == 1)
 
 	//Escolher numero de layouts random
 	//irandom_range(4, 6)
-	for (var i = 1; i <= 0; i++)
+	for (var i = 1; i <= irandom_range(4, 5); i++)
 	{
 		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 		pos2 = ds_list_find_index(LayoutList, Layout);
@@ -100,7 +117,7 @@ if (camera == 2)
 	
 	//Escolher numero de layouts random
 	//irandom_range(4, 5)
-	for (var i = 1; i <= 0; i++)
+	for (var i = 1; i <= irandom_range(3, 4); i++)
 	{
 		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 		pos2 = ds_list_find_index(LayoutList, Layout);
@@ -122,9 +139,37 @@ if (camera == 3)
 	ds_list_add(LayoutList, L12);
 	ds_list_add(LayoutList, L13);
 	ds_list_add(LayoutList, L14);
+	ds_list_add(LayoutList, L15);
 	
 	//Escolher numero de layouts random
-	for (var i = 1; i <= 3; i++)
+	for (var i = 1; i <= irandom_range(3, 4); i++)
+	{
+		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
+		pos2 = ds_list_find_index(LayoutList, Layout);
+		show_message("Layout: " + string(Layout));
+		ds_list_delete(LayoutList, pos2);
+		ds_list_add(LayoutListRandom, Layout);
+	}
+}
+
+//CAMERA 4
+if (camera == 4)
+{
+	show_message("Camera 4");
+	ds_list_destroy(LayoutList);
+	ds_list_destroy(LayoutListRandom);
+	LayoutList = ds_list_create();
+	LayoutListRandom = ds_list_create();
+	
+	ds_list_add(LayoutList, L16);
+	ds_list_add(LayoutList, L17);
+	ds_list_add(LayoutList, L18);
+	ds_list_add(LayoutList, L19);
+	ds_list_add(LayoutList, L20);
+	ds_list_add(LayoutList, L21);
+	
+	//Escolher numero de layouts random
+	for (var i = 1; i <= irandom_range(4, 5); i++)
 	{
 		Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 		pos2 = ds_list_find_index(LayoutList, Layout);

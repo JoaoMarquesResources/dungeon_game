@@ -26,12 +26,6 @@ if (deteriorate == deteriorateAfter)
 	invulnerable = 120;
 }
 
-if (alpha)
-{
-	image_alpha -= 1.4 / deteriorateTime;
-	if (image_alpha <= 0) instance_destroy();
-}
-	
 //Friction
 fric = 0.05;
 if (z == 0) fric = 0.10;
@@ -41,3 +35,5 @@ x += lengthdir_x(spd, direction);
 y += lengthdir_y(spd, direction);
 if (instance_place(x, y, oWall)) spd = 0;
 spd = max(spd - fric, 0);
+
+show_debug_message(flash);

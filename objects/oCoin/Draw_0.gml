@@ -1,12 +1,5 @@
 /// @description desc
-if (invulnerable != 0) && ((invulnerable mod 8 < 2) == 0) && (flash == 0)
-{
-	alpha = true;
-	//skip draw
-}
-else
-{	
-	draw_sprite_ext(
+draw_sprite_ext(
 	sprite_index,
 	image_index,
 	floor(x),
@@ -16,5 +9,4 @@ else
 	image_angle,
 	image_blend,
 	image_alpha
-	)
-}
+)

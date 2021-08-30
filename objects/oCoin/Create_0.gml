@@ -12,4 +12,3 @@ delay = 30;
 
 invulnerable = 0;
 flash = 0;
-alpha = false;

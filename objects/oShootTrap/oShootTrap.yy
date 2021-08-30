@@ -35,7 +35,7 @@
   ],
   "parent": {
     "name": "Traps",
-    "path": "folders/Objects/Traps.yy",
+    "path": "folders/Objects/Enemies/Traps.yy",
   },
   "resourceVersion": "1.0",
   "name": "oShootTrap",

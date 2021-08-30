@@ -8,7 +8,8 @@ velv = 0;
 
 dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y);
 
-delay = 30;
+delay = irandom_range(100, 150);
+bulletsSpeed = 0;
 
 goToChaseTimer = 30;
 

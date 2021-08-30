@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "ROUND 1",
-    "path": "folders/Scripts/EnemysSpawner/ROUND 1.yy",
+    "name": "EnemysSpawner",
+    "path": "folders/Scripts/EnemysSpawner.yy",
   },
   "resourceVersion": "1.0",
   "name": "SpawnEnemysDelay_ETC",

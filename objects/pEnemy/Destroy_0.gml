@@ -9,5 +9,5 @@ if (entityFragmentCount > 0)
 
 if (entityDropList != -1)
 {
-	DropItems(x, y, entityDropList);
+	DropItems(x, y - sprite_height / 2, entityDropList);
 }

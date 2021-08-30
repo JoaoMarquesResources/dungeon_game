@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 16,
-  "bbox_top": 5,
-  "bbox_bottom": 20,
+  "bbox_left": 1,
+  "bbox_right": 15,
+  "bbox_top": 1,
+  "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 19,
-  "height": 21,
+  "width": 17,
+  "height": 16,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,18 +24,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"623671bd-3679-4f87-9442-eb8e36086859","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"623671bd-3679-4f87-9442-eb8e36086859","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"d4026586-e803-44b3-9665-1f6f71627b1e","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"623671bd-3679-4f87-9442-eb8e36086859","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2767d6f0-7a27-4999-967f-f52a34da50d9","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2767d6f0-7a27-4999-967f-f52a34da50d9","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"d4026586-e803-44b3-9665-1f6f71627b1e","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"2767d6f0-7a27-4999-967f-f52a34da50d9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"93a67260-50d9-4a91-966d-43504005dc02","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"93a67260-50d9-4a91-966d-43504005dc02","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"d4026586-e803-44b3-9665-1f6f71627b1e","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"93a67260-50d9-4a91-966d-43504005dc02","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9f54eb0f-310c-45ae-bcb6-ffe68a83efed","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9f54eb0f-310c-45ae-bcb6-ffe68a83efed","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"d4026586-e803-44b3-9665-1f6f71627b1e","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"9f54eb0f-310c-45ae-bcb6-ffe68a83efed","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9a478f51-fcd9-4a15-b749-b5d0cd33a345","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9a478f51-fcd9-4a15-b749-b5d0cd33a345","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"4cd67c4a-5441-413f-9c1e-25808504829c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"9a478f51-fcd9-4a15-b749-b5d0cd33a345","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"067086c6-e5a2-4302-a684-b04edff2615a","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"067086c6-e5a2-4302-a684-b04edff2615a","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"4cd67c4a-5441-413f-9c1e-25808504829c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"067086c6-e5a2-4302-a684-b04edff2615a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cb910d0f-f8f0-4081-a0ab-4fac196e69c4","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cb910d0f-f8f0-4081-a0ab-4fac196e69c4","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"4cd67c4a-5441-413f-9c1e-25808504829c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"cb910d0f-f8f0-4081-a0ab-4fac196e69c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"807a1750-2e13-4eda-8ae7-04c4f11bb01c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"807a1750-2e13-4eda-8ae7-04c4f11bb01c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"LayerId":{"name":"4cd67c4a-5441-413f-9c1e-25808504829c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","name":"807a1750-2e13-4eda-8ae7-04c4f11bb01c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},
@@ -50,10 +50,10 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ded61881-8bb4-4077-9bf3-46d9af70c895","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"623671bd-3679-4f87-9442-eb8e36086859","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"639365b0-5b6f-4845-a5da-009830ade6b4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2767d6f0-7a27-4999-967f-f52a34da50d9","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"013bc627-fd68-4066-bb2e-8d3c4a92285c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93a67260-50d9-4a91-966d-43504005dc02","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"baab1b38-1158-429d-9e3a-f70fdfb30abd","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f54eb0f-310c-45ae-bcb6-ffe68a83efed","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eb83041c-f686-427e-962f-1764611654e5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a478f51-fcd9-4a15-b749-b5d0cd33a345","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"364a0084-b56f-463a-8278-3a13a395bffc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"067086c6-e5a2-4302-a684-b04edff2615a","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b0a1018b-7f0e-4777-9c18-9ff708f13afe","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb910d0f-f8f0-4081-a0ab-4fac196e69c4","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4f532ba9-7734-4356-82cc-476a35fe6e5c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"807a1750-2e13-4eda-8ae7-04c4f11bb01c","path":"sprites/sMagoNPC/sMagoNPC.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -66,8 +66,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 9,
-    "yorigin": 21,
+    "xorigin": 8,
+    "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sMagoNPC","path":"sprites/sMagoNPC/sMagoNPC.yy",},
@@ -77,7 +77,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4026586-e803-44b3-9665-1f6f71627b1e","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4cd67c4a-5441-413f-9c1e-25808504829c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

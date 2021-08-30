@@ -23,15 +23,14 @@ switch (state)
 			if (delay == 0)
 			{
 				dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y + 5);
-				//for (var i = 1; i >= -1; i--)
-				//for (var i = -value; i >= value; i--)
+				bulletsSpeed = random_range(0.6, 0.8);
 				for (var i = 80; i >= -80; i -= 20)
 				{
 					var _tiro = instance_create_layer(x, y - sprite_height / 2,  "Player", oEnemysBullets);
-					_tiro.speed = 0.5;
+					_tiro.speed = bulletsSpeed;
 					_tiro.direction = dirTiro + i;
 					_tiro.image_angle = _tiro.direction;
-					delay = 60;
+					delay = irandom_range(90, 120);
 				}
 			}
 			
