@@ -1,5 +1,5 @@
 /// @description desc
-instance_create_layer(x + 4, y + sprite_height / 2, "Explosion", oExplosion);
+instance_create_layer(x, y, "Explosion", oExplosion);
 
 if (entityFragmentCount > 0)
 {

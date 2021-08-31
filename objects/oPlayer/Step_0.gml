@@ -4,6 +4,7 @@ down = keyboard_check(ord("S"));
 left = keyboard_check(ord("A"));
 right = keyboard_check(ord("D"));
 chest = keyboard_check(ord("E"));
+buy = keyboard_check(ord("E"));
 roll = mouse_check_button_pressed(mb_right);
 
 invulnerable = max(invulnerable - 1, 0);

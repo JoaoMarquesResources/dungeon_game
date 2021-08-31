@@ -38,7 +38,25 @@ if (global.RoomEnemys == 0 && PortalCreate && room != rShop)
 	}
 }
 
-
+//Items Manager
+if (room == rShop)
+{
+	if (CreateLeaf && shop == 1)
+	{
+		instance_create_layer(124, 28, "Items", oLeaf);
+		ds_list_add(global.ItemsLista, oLeaf);
+		CreateLeaf = false;
+	}
+	
+	if (CreateMushroom && shop == 2)
+	{
+		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
+		instance_create_layer(124, 28, "Items", oMushroom);
+		ds_list_add(global.ItemsLista, oMushroom);
+		CreateMushroom = false;
+	}
+}
+show_debug_message("Room" + string(Room));
 
 switch (state)
 {
@@ -263,7 +281,7 @@ switch (state)
 				instance_create_layer(128, 32, "Enemys", oNormalEnemy);
 				instance_create_layer(128, 64, "Enemys", oNormalEnemy);
 				instance_create_layer(32, 64, "Enemys", oNormalEnemy);
-				instance_create_layer(72, 48, "Enemys", oSkeletonEnemy);
+				instance_create_layer(72, 48, "Enemys", oCruzEnemy);
 				instance_create_layer(88, 48, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
@@ -384,16 +402,16 @@ if (camera == 2)
 				if (StopEnemysAppearingAnim)
 				{
 					instance_create_layer(80, 32, "EnemysAppearingAnim", oEnemysAppearing);
-					instance_create_layer(48, 64, "EnemysAppearingAnim", oEnemysAppearing);
-					instance_create_layer(112, 64, "EnemysAppearingAnim", oEnemysAppearing);
+					instance_create_layer(48, 56, "EnemysAppearingAnim", oEnemysAppearing);
+					instance_create_layer(112, 56, "EnemysAppearingAnim", oEnemysAppearing);
 					StopEnemysAppearingAnim = false;
 				}
 			
 				if (global.createEnemys)
 				{
 					instance_create_layer(80, 32, "Enemys", oFastEnemy);
-					instance_create_layer(48, 64, "Enemys", oNormalEnemy);
-					instance_create_layer(112, 64, "Enemys", oNormalEnemy);
+					instance_create_layer(48, 56, "Enemys", oNormalEnemy);
+					instance_create_layer(112, 56, "Enemys", oNormalEnemy);
 					delay = 30;
 					global.createEnemys = false;
 				}
@@ -485,6 +503,40 @@ if (camera == 2)
 			SpawnEnemysDelay_ETC();
 		
 			break;
+			
+		case layout.l_12:
+			listValue = L12;
+	
+			if (choose_layout)
+			{
+				if (StopEnemysAppearingAnim)
+				{
+					instance_create_layer(48, 32, "EnemysAppearingAnim", oEnemysAppearing);
+					instance_create_layer(112, 64, "EnemysAppearingAnim", oEnemysAppearing);
+					StopEnemysAppearingAnim = false;
+				}
+			
+				if (global.createEnemys)
+				{
+					instance_create_layer(48, 32, "Enemys", oCruzEnemy);
+					instance_create_layer(112, 64, "Enemys", oCruzEnemy);
+					delay = 30;
+					global.createEnemys = false;
+				}
+			
+				if (instance_exists(oEnemysAppearing))
+				{
+					if (oEnemysAppearing.changeVariables)
+					{
+						global.createEnemys = true;
+						oEnemysAppearing.changeVariables = false;
+					}
+				}
+			}
+		
+			SpawnEnemysDelay_ETC();
+		
+			break;
 		
 		default: show_debug_message("state");
 	}
@@ -510,8 +562,8 @@ if (camera == 3)
 				if (global.createEnemys)
 				{
 					instance_create_layer(80, 80, "Enemys", oSquare);
-					instance_create_layer(64, 64, "Enemys", oNormalEnemy);
-					instance_create_layer(96, 64, "Enemys", oNormalEnemy);
+					instance_create_layer(64, 64, "Enemys", oCruzEnemy);
+					instance_create_layer(96, 64, "Enemys", oCruzEnemy);
 					delay = 30;
 					global.createEnemys = false;
 				}

@@ -16,6 +16,10 @@ PortalCreateHelp = true;
 
 NextLayout = false;
 
+global.ItemsLista = ds_list_create();
+CreateLeaf = true;
+CreateMushroom = true;
+
 global.atingirMimicChest = false;
 
 global.PlayerHP = 5;
@@ -23,6 +27,7 @@ global.PlayerHpMax = global.PlayerHP;
 global.playerMoney = 0;
 
 camera = 0;
+shop = 0;
 Room = Camera1;
 
 listValue = noone;
