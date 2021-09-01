@@ -1,2 +1,2 @@
 /// @description desc
-showUI = false;
+game_restart();

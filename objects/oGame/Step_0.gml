@@ -55,6 +55,15 @@ if (room == rShop)
 		ds_list_add(global.ItemsLista, oMushroom);
 		CreateMushroom = false;
 	}
+	
+	if (CreatePotion && shop == 3)
+	{
+		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
+		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
+		instance_create_layer(124, 28, "Items", oPotion);
+		ds_list_add(global.ItemsLista, oPotion);
+		CreatePotion = false;
+	}
 }
 show_debug_message("Room" + string(Room));
 
@@ -475,7 +484,7 @@ if (camera == 2)
 				{
 					instance_create_layer(80, 24, "EnemysAppearingAnim", oEnemysAppearing);
 					instance_create_layer(48, 48, "EnemysAppearingAnim", oEnemysAppearing);
-					instance_create_layer(80, 70, "EnemysAppearingAnim", oEnemysAppearing);
+					instance_create_layer(80, 68, "EnemysAppearingAnim", oEnemysAppearing);
 					instance_create_layer(112, 48, "EnemysAppearingAnim", oEnemysAppearing);
 					StopEnemysAppearingAnim = false;
 				}
@@ -914,6 +923,18 @@ if (camera == 4)
 			break;
 	}
 }
+
+if (camera == 5)
+{
+	if (createBoss)
+	{
+		instance_create_layer(80, 24, "Enemys", oBossHead);
+		instance_create_layer(32, 16, "Enemys", oBossHand);
+		instance_create_layer(128, 16, "Enemys", oBossHand);
+		createBoss = false;
+	}
+}
+
 show_debug_message("ds size" + string(ds_list_size(LayoutListRandom)));
 show_debug_message(global.createEnemys);
 show_debug_message(StopEnemysAppearingAnim);

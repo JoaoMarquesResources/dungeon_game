@@ -19,6 +19,9 @@ NextLayout = false;
 global.ItemsLista = ds_list_create();
 CreateLeaf = true;
 CreateMushroom = true;
+CreatePotion = true;
+
+createBoss = true;
 
 global.atingirMimicChest = false;
 
