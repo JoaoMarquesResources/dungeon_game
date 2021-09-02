@@ -929,8 +929,6 @@ if (camera == 5)
 	if (createBoss)
 	{
 		instance_create_layer(80, 24, "Enemys", oBossHead);
-		instance_create_layer(32, 16, "Enemys", oBossHand);
-		instance_create_layer(128, 16, "Enemys", oBossHand);
 		createBoss = false;
 	}
 }

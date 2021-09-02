@@ -10,7 +10,7 @@ function BulletCollision()
 	
 	with (instance_place(x, y, pEnemy))
 	{
-		hp--;
+		if (state != "HandsShooting") hp--;
 		if (object_index == oMimicChest)
 		{
 			if (oMimicChest.state != "chase") global.atingirMimicChest = true;
