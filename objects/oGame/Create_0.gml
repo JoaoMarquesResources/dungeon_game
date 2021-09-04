@@ -25,7 +25,7 @@ createBoss = true;
 
 global.atingirMimicChest = false;
 
-global.PlayerHP = 5;
+global.PlayerHP = 6;
 global.PlayerHpMax = global.PlayerHP;
 global.playerMoney = 0;
 

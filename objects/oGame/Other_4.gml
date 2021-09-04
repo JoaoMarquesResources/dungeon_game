@@ -7,6 +7,8 @@ if (camera == 1) Room = Camera2; //room = goto
 if (camera == 2) Room = Camera3;
 if (camera == 3) Room = Camera4;
 
+if (instance_exists(oMagoNPC)) oMagoNPC.taVisto = false;
+
 global.midTransition = false;
 global.createEnemys = false;
 StopEnemysAppearingAnim = true;
@@ -93,7 +95,7 @@ if (room != rShop)
 
 		//Escolher numero de layouts random
 		//irandom_range(4, 5)
-		for (var i = 1; i <= irandom_range(4, 5); i++)
+		for (var i = 1; i <= 0; i++)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);
@@ -175,7 +177,7 @@ if (room != rShop)
 	
 		//Escolher numero de layouts random
 		//irandom_range(4, 5)
-		for (var i = 1; i <= irandom_range(4, 5); i++)
+		for (var i = 1; i <= irandom_range(3, 4); i++)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);

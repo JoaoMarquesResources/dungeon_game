@@ -29,7 +29,7 @@ switch (state)
 				_tiro.speed = random_range(1, 1.5);
 				_tiro.direction = dirTiro;
 				_tiro.image_angle = _tiro.direction;
-				delay = irandom_range(10, 30);
+				delay = irandom_range(20, 30);
 			}
 			
 			if (velh != 0 && oPlayer.velh != 0) image_xscale = sign(velh);
