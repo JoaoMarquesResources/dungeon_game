@@ -1,7 +1,7 @@
 /// @description desc
 if (instance_exists(oPlayer)) {
 	
-	if (keyboard_check_pressed(vk_space))
+	if (keyboard_check_pressed(ord("E")))
 	{
 		if (page + 1 < array_length_1d(text)) {
 			page += 1;

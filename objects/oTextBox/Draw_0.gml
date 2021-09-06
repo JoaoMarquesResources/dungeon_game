@@ -1,6 +1,6 @@
 /// @description desc
 //draw textbox
-draw_rectangle(x - 1, y - 1, x + boxWidth, y + boxHeight, false);
+draw_rectangle(x - 1, y - 1, x + boxWidth + 5, y + boxHeight + 2, false);
 draw_sprite(sBox, 0, x, y);
 
 //draw text

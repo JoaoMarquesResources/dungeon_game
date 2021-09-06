@@ -153,9 +153,17 @@ switch(state)
 		image_index = 0;
 		if (DelayToStartShooting == 0)
 		{
-			instance_create_layer(36, 20, "Enemys", oBossHand);
-			instance_create_layer(124, 20, "Enemys", oBossHand);
-			oBossHand.shoot = true;
+			instance_create_layer(36, 20, "Enemys", oBossHandsAppearing);
+			instance_create_layer(124, 20, "Enemys", oBossHandsAppearing);
+		}
+		if (instance_exists(oBossHandsAppearing)) {
+			if (floor(oBossHandsAppearing.image_index) == 2) {
+				oBossHandsAppearing.image_speed = 0;
+				instance_create_layer(36, 20, "Enemys", oBossHand);
+				instance_create_layer(124, 20, "Enemys", oBossHand);
+				oBossHand.shoot = true;
+				instance_destroy(oBossHandsAppearing);
+			}
 		}
 		
 		break;

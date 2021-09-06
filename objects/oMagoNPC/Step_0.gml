@@ -4,7 +4,7 @@ if (instance_exists(oPlayer))
 {
 	var _distNPC = point_distance(x, y, oPlayer.x, oPlayer.y);
 	if (_distNPC < radius) {
-		if (keyboard_check_pressed(vk_space)) {
+		if (keyboard_check_pressed(ord("E"))) {
 			if (myTextbox == noone) {
 				myTextbox = instance_create_layer(x + 9, y - 32, "textBox", oTextBox);
 				myTextbox.text = myText;

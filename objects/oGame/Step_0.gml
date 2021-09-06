@@ -43,6 +43,7 @@ if (room == rShop)
 {
 	if (CreateLeaf && shop == 1)
 	{
+		oMagoNPC.myText = ["HI, I'm Isaac and...", "Welcome to this DUNGEON!", "This place is DANGEROUS...", "...so be careful.", "You can buy what you want!!!"];
 		instance_create_layer(124, 28, "Items", oLeaf);
 		ds_list_add(global.ItemsLista, oLeaf);
 		CreateLeaf = false;
@@ -50,19 +51,32 @@ if (room == rShop)
 	
 	if (CreateMushroom && shop == 2)
 	{
+		oMagoNPC.myText = ["Wow you made trogth floor 2", "I think there are 5 floors.", "Pick up that mushroom...", "it can help you."];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		instance_create_layer(124, 28, "Items", oMushroom);
 		ds_list_add(global.ItemsLista, oMushroom);
 		CreateMushroom = false;
 	}
 	
-	if (CreatePotion && shop == 3)
+	if (CreateCookie && shop == 3)
 	{
+		oMagoNPC.myText = ["That cookie seems to be...", "...delicious!"];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
-		instance_create_layer(124, 28, "Items", oPotion);
-		ds_list_add(global.ItemsLista, oPotion);
-		CreatePotion = false;
+		instance_create_layer(124, 28, "Items", oCookie);
+		ds_list_add(global.ItemsLista, oCookie);
+		CreateCookie = false;
+	}
+	
+	if (CreateEgg && shop == 4)
+	{
+		oMagoNPC.myText = ["Floor 4 !!!", "Be careful", "In this dungeon exists...", "a big square enemy so...", "...you now what you need to do."];
+		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
+		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
+		if (instance_exists(oCookie)) instance_destroy(oCookie);
+		instance_create_layer(124, 28, "Items", oEgg);
+		ds_list_add(global.ItemsLista, oEgg);
+		CreateEgg = false;
 	}
 }
 show_debug_message("Room" + string(Room));
