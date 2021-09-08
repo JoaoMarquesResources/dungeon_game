@@ -7,7 +7,7 @@ yBuffer = 1;
 
 boxHeight = sprite_get_height(sBox);
 boxWidth = sprite_get_width(sBox);
-stringHeight = string_height(text);
+stringHeight = 8;
 creator = noone;
 charCount = 0;
-Name = noone;
+Name = noone; 

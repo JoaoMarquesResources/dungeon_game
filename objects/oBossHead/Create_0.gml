@@ -19,6 +19,9 @@ BigBulletsDelay = -1;
 TripleBulletsDelay = -1;
 WakingUpDelay = 100;
 
+explosionsDelay = 20;
+dieDelay = 250;
+
 MultipleShootMiddle = -1;
 delay2 = 60;
 var360 = 0;

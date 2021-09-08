@@ -16,6 +16,9 @@ PortalCreateHelp = true;
 
 NextLayout = false;
 
+fail = false;
+givePotion = false;
+stopTalking = false;
 global.ItemsLista = ds_list_create();
 CreateLeaf = true;
 CreateMushroom = true;
@@ -23,9 +26,9 @@ CreateCookie = true;
 CreateEgg = true;
 CreatePotion = true;
 
-createBoss = true;
-
 global.atingirMimicChest = false;
+global.final = false;
+cenaFinal = false;
 
 global.PlayerHP = 6;
 global.PlayerHpMax = global.PlayerHP;

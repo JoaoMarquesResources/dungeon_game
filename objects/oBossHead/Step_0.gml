@@ -311,16 +311,33 @@ switch(state)
 				state = "running";
 				DelayToHandShoots = 500;
 			}
-		}	
+		}
 		break;
 		
 	case "dead":
-		instance_destroy();
-		instance_destroy(oBossHand);
+		velh = 0;
+		velv = 0;
+		explosionsDelay--;
+		dieDelay--;
+
+		if (dieDelay != 0)
+		{
+			if (explosionsDelay <= 0) {
+				instance_create_layer(x + random_range(-sprite_width / 2, sprite_width / 2), y + random_range(-sprite_height / 2, sprite_height / 2), "Explosion", oExplosion);
+				ScreenShake(2.5, 10);
+				explosionsDelay = 10;
+			}
+		}
+		else {
+			instance_create_layer(x, y, "Explosion", oExplosion);
+			instance_create_layer(x, y, "Enemys", oBossDie);
+			ScreenShake(7, 20);
+			instance_destroy(oBossHand);
+			instance_destroy(oBossHead); 
+		}
+		
 		break;
 }
-if (hp <= 0) state = "dead";
-show_debug_message("BOSS HP:	" + string(hp));
-show_debug_message("delay:	" + string(delay));
-show_debug_message(x);
-show_debug_message(y);
+if (hp <= 0) {
+	state = "dead";
+}

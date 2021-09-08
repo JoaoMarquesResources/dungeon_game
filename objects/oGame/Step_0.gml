@@ -15,7 +15,7 @@ if (global.RoomEnemys == 0 && PortalCreate && room != rShop)
 	if (delayToCreatePortal == 0)
 	{
 		var chooseChest = choose(oChest, oChest, oChest, oChest, oMimicChest);
-		if (camera != 3 && camera != 2)
+		if (camera != 3 && camera != 2 && camera != 5 && room != rShopFinal && room != FINAL && room != Camera0)
 		{
 			instance_create_layer(room_width / 2 - 30, room_height / 2, "Objects", oRoundPortal);
 			instance_create_layer(room_width / 2 + 30, room_height / 2, "Objects", oShopPortal);
@@ -33,53 +33,69 @@ if (global.RoomEnemys == 0 && PortalCreate && room != rShop)
 			instance_create_layer(room_width / 2 + 28, room_height / 2, "Objects", oShopPortal);
 			instance_create_layer(room_width / 2 + 3, room_height / 2 + 5, "Enemys", chooseChest);
 		}
+		if (camera == 5)
+		{
+			instance_create_layer(room_width / 2, room_height / 2, "Objects", oShopPortal);
+		}
 		delayToCreatePortal = 60;
 		PortalCreate = false;
 	}
 }
-
+show_debug_message(shop);
 //Items Manager
 if (room == rShop)
 {
 	if (CreateLeaf && shop == 1)
 	{
-		oMagoNPC.myText = ["HI, I'm Isaac and...", "Welcome to this DUNGEON!", "This place is DANGEROUS...", "...so be careful.", "You can buy what you want!!!"];
+		oMagoNPC.myText = ["HI, I'm Isaac and...", "Welcome to this DUNGEON!", "This place is DANGEROUS...", "...so be careful.", "You can buy what you want!"];
 		instance_create_layer(124, 28, "Items", oLeaf);
-		ds_list_add(global.ItemsLista, oLeaf);
 		CreateLeaf = false;
 	}
 	
 	if (CreateMushroom && shop == 2)
 	{
-		oMagoNPC.myText = ["Wow you made trogth floor 2", "I think there are 5 floors.", "Pick up that mushroom...", "it can help you."];
+		oMagoNPC.myText = ["Wow you haven't died yet!"];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		instance_create_layer(124, 28, "Items", oMushroom);
-		ds_list_add(global.ItemsLista, oMushroom);
 		CreateMushroom = false;
 	}
 	
 	if (CreateCookie && shop == 3)
 	{
-		oMagoNPC.myText = ["That cookie seems to be...", "...delicious!"];
+		oMagoNPC.myText = ["Hi again!"];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
 		instance_create_layer(124, 28, "Items", oCookie);
-		ds_list_add(global.ItemsLista, oCookie);
 		CreateCookie = false;
 	}
 	
 	if (CreateEgg && shop == 4)
 	{
-		oMagoNPC.myText = ["Floor 4 !!!", "Be careful", "In this dungeon exists...", "a big square enemy so...", "...you now what you need to do."];
+		oMagoNPC.myText = ["Be careful.", "In this dungeon exists...", "...a BIG enemy so...", "...take care."];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
 		if (instance_exists(oCookie)) instance_destroy(oCookie);
 		instance_create_layer(124, 28, "Items", oEgg);
-		ds_list_add(global.ItemsLista, oEgg);
 		CreateEgg = false;
 	}
+	
+	if (shop == 5)
+	{
+		instance_destroy(oRoundPortal);
+		instance_destroy(oHeart);
+		if (ds_list_size(global.ItemsLista) >= 4) {
+			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "You collected all the itens.", "And you passed the dungeon!", "Now you need the potion.", "Give me a minute, I will...", "prepare it!"];
+		}
+		else {
+			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "But you didn't collect...", "all the itens on my shop.", "I think you need to restart."];
+			fail = true;
+		}
+		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
+		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
+		if (instance_exists(oCookie)) instance_destroy(oCookie);
+		if (instance_exists(oEgg)) instance_destroy(oEgg);
+	}
 }
-show_debug_message("Room" + string(Room));
 
 switch (state)
 {
@@ -304,7 +320,7 @@ switch (state)
 				instance_create_layer(128, 32, "Enemys", oNormalEnemy);
 				instance_create_layer(128, 64, "Enemys", oNormalEnemy);
 				instance_create_layer(32, 64, "Enemys", oNormalEnemy);
-				instance_create_layer(72, 48, "Enemys", oCruzEnemy);
+				instance_create_layer(72, 48, "Enemys", oSkeletonEnemy);
 				instance_create_layer(88, 48, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
@@ -331,7 +347,6 @@ if (camera == 2)
 	switch (state)
 	{
 		case layout.ChooseRandom:
-			show_message("choose random");
 			LayoutChoosed =	ds_list_find_value(LayoutListRandom, random(ds_list_size(LayoutListRandom)));
 			state = LayoutChoosed;
 		
@@ -938,16 +953,31 @@ if (camera == 4)
 	}
 }
 
-if (camera == 5)
+if (global.final)
 {
-	if (createBoss)
-	{
-		instance_create_layer(80, 24, "Enemys", oBossHead);
-		createBoss = false;
-	}
+	var target = rShopFinal;
+
+	TransitionStart(target, seqFadeOut, seqFadeIn);
+	
+	instance_deactivate_object(oPlayer);
+	instance_deactivate_object(oGun);
+	
+	cenaFinal = true;
+	global.final = false;
 }
 
-show_debug_message("ds size" + string(ds_list_size(LayoutListRandom)));
-show_debug_message(global.createEnemys);
-show_debug_message(StopEnemysAppearingAnim);
-show_debug_message("camera: " + string(camera));
+if (cenaFinal)
+{
+	if (room == rShopFinal) {
+		oPlayer.velh = 0;
+		oPlayer.velv = 0;
+		oPlayer.image_xscale = -1;
+		instance_destroy(oGun);
+		if (!stopTalking) oMagoNPC.myText = ["I made the potion!", "Now you can leave!"];
+		else instance_destroy(oTextBox);
+		if (givePotion) {
+			instance_create_layer(64, 60, "Items", oPotion);
+			givePotion = false;
+		}
+	}
+}

@@ -35,5 +35,3 @@ x += lengthdir_x(spd, direction);
 y += lengthdir_y(spd, direction);
 if (instance_place(x, y, oWall)) spd = 0;
 spd = max(spd - fric, 0);
-
-show_debug_message(flash);

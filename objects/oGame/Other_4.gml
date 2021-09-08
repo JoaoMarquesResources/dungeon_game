@@ -1,11 +1,14 @@
 /// @description Alguma coisa que seja preciso resetar sempre que abro nova room
 randomize();
 
-if (room != rShop) camera++;
-else shop++;
-if (camera == 1) Room = Camera5; //room = goto
+if (room != rShop) {
+	camera++;
+	shop++;
+}
+if (camera == 1) Room = Camera2; //room = goto
 if (camera == 2) Room = Camera3;
 if (camera == 3) Room = Camera4;
+if (camera == 4) Room = Camera5;
 
 global.midTransition = false;
 global.createEnemys = false;
@@ -14,6 +17,8 @@ StopEnemysAppearingAnim = true;
 delayToCreatePortal = 60;
 PortalCreate = false;
 PortalCreateHelp = true;
+
+fail = false;
 
 // States
 enum layout
@@ -79,7 +84,6 @@ if (room != rShop)
 	//CAMERA 1
 	if (camera == 1)
 	{
-		show_message("Camera 1");
 		LayoutList = ds_list_create();
 		LayoutListRandom = ds_list_create();
 
@@ -97,7 +101,6 @@ if (room != rShop)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);
-			show_message(Layout);
 			ds_list_delete(LayoutList, pos2);
 			ds_list_add(LayoutListRandom, Layout);
 		}
@@ -106,7 +109,6 @@ if (room != rShop)
 	//CAMERA 2
 	if (camera == 2)
 	{
-		show_message("Camera 2");
 		ds_list_destroy(LayoutList);
 		ds_list_destroy(LayoutListRandom);
 		LayoutList = ds_list_create();
@@ -125,7 +127,6 @@ if (room != rShop)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);
-			show_message("Layout: " + string(Layout));
 			ds_list_delete(LayoutList, pos2);
 			ds_list_add(LayoutListRandom, Layout);
 		}
@@ -134,7 +135,6 @@ if (room != rShop)
 	//CAMERA 3
 	if (camera == 3)
 	{
-		show_message("Camera 3");
 		ds_list_destroy(LayoutList);
 		ds_list_destroy(LayoutListRandom);
 		LayoutList = ds_list_create();
@@ -151,7 +151,6 @@ if (room != rShop)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);
-			show_message("Layout: " + string(Layout));
 			ds_list_delete(LayoutList, pos2);
 			ds_list_add(LayoutListRandom, Layout);
 		}
@@ -160,7 +159,6 @@ if (room != rShop)
 	//CAMERA 4
 	if (camera == 4)
 	{
-		show_message("Camera 4");
 		ds_list_destroy(LayoutList);
 		ds_list_destroy(LayoutListRandom);
 		LayoutList = ds_list_create();
@@ -179,7 +177,6 @@ if (room != rShop)
 		{
 			Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 			pos2 = ds_list_find_index(LayoutList, Layout);
-			show_message("Layout: " + string(Layout));
 			ds_list_delete(LayoutList, pos2);
 			ds_list_add(LayoutListRandom, Layout);
 		}

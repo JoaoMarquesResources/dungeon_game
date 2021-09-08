@@ -1,2 +1,2 @@
 /// @description desc
-HurtPlayer(1);
+if (state != "sleeping") HurtPlayer(1);

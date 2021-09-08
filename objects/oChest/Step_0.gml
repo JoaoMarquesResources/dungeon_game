@@ -14,5 +14,3 @@ if (global.abrirChest)
 	image_index = 1;
 	global.abrirChest = false;
 }
-
-show_debug_message(entityFragmentCount);

@@ -1,12 +1,16 @@
 /// @description desc
 if (instance_exists(oPlayer))
 {
-	var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
-	if (dist < radius)
+	delay--;
+	if (delay <= 0)
 	{
-		if (oPlayer.buy) 
+		var dist = point_distance(x, y, oPlayer.x, oPlayer.y);
+		if (dist < radius)
 		{
-			instance_destroy();
+			if (oPlayer.buy) 
+			{
+				instance_destroy();
+			}
 		}
 	}
 }

@@ -8,6 +8,11 @@ if (instance_exists(oPlayer)) {
 			charCount = 0;
 		}
 		else {
+			if (oGame.cenaFinal && room == rShopFinal) {
+				oGame.stopTalking = true;
+				oGame.givePotion = true;
+			}
+			if (oGame.shop == 5 && oGame.fail == false) global.final = true;
 			instance_destroy();
 			creator.alarm[1] = 1;
 		}

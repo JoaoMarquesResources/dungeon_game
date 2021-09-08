@@ -83,4 +83,3 @@ switch (state)
 		instance_destroy();
 		break;
 }
-show_debug_message("sign(velh))" + string(sign(velh)));

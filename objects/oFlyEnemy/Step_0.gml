@@ -63,4 +63,3 @@ switch(state)
 		break;
 }
 if (velh != 0) image_xscale = sign(velh);
-show_debug_message("timer:	" + string(timer));
