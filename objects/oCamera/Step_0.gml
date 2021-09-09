@@ -27,6 +27,9 @@ y = clamp(y, viewHeightHalf, room_height - viewHeightHalf);
 x += random_range(-shakeRemain, shakeRemain);
 y += random_range(-shakeRemain, shakeRemain);
 
+show_debug_message("X: " + string(x))
+show_debug_message("Y: " + string(y))
+
 shakeRemain = max(0, shakeRemain - ((1 / shakeLength) * shakeMagnitude));
 
 camera_set_view_pos(cam, x - viewWidHalf, y - viewHeightHalf);

@@ -2,46 +2,48 @@
 randomize();
 global.iCamera = instance_create_layer(0, 0, layer, oCamera);
 
-atingiuPlayer = false;
+if (room != MenuScreen)
+{
+	atingiuPlayer = false;
 
-showUI = false;
+	showUI = false;
 
-global.createEnemys = false;
-StopEnemysAppearingAnim = true;
+	global.createEnemys = false;
+	StopEnemysAppearingAnim = true;
 
-global.RoomEnemys = instance_number(pEnemy);
-delayToCreatePortal = 60;
-PortalCreate = false;
-PortalCreateHelp = true;
+	global.RoomEnemys = instance_number(pEnemy);
+	delayToCreatePortal = 60;
+	PortalCreate = false;
+	PortalCreateHelp = true;
 
-NextLayout = false;
+	NextLayout = false;
 
-fail = false;
-givePotion = false;
-stopTalking = false;
-global.ItemsLista = ds_list_create();
-CreateLeaf = true;
-CreateMushroom = true;
-CreateCookie = true;
-CreateEgg = true;
-CreatePotion = true;
+	fail = false;
+	givePotion = false;
+	stopTalking = false;
+	global.ItemsLista = ds_list_create();
+	CreateLeaf = true;
+	CreateMushroom = true;
+	CreateCookie = true;
+	CreateEgg = true;
 
-global.atingirMimicChest = false;
-global.final = false;
-cenaFinal = false;
+	global.atingirMimicChest = false;
+	global.final = false;
+	cenaFinal = false;
 
-global.PlayerHP = 6;
-global.PlayerHpMax = global.PlayerHP;
-global.playerMoney = 0;
+	global.PlayerHP = 6;
+	global.PlayerHpMax = global.PlayerHP;
+	global.playerMoney = 0;
 
-camera = 0;
-shop = 0;
-Room = Camera1;
+	camera = 0;
+	shop = 0;
+	Room = Camera1;
 
-listValue = noone;
+	listValue = noone;
 
-state = layout.ChooseRandom;
-delay = 0;
-DelayForNextLayout = 120;
+	state = layout.ChooseRandom;
+	delay = 0;
+	DelayForNextLayout = 120;
 
-choose_layout = true;
+	choose_layout = true;
+}

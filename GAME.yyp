@@ -42,7 +42,6 @@
     {"id":{"name":"sBossHead","path":"sprites/sBossHead/sBossHead.yy",},"order":1,},
     {"id":{"name":"sPotion","path":"sprites/sPotion/sPotion.yy",},"order":2,},
     {"id":{"name":"oCruzEnemy","path":"objects/oCruzEnemy/oCruzEnemy.yy",},"order":0,},
-    {"id":{"name":"Camera0","path":"rooms/Camera0/Camera0.yy",},"order":10,},
     {"id":{"name":"oBossBulletParticle","path":"objects/oBossBulletParticle/oBossBulletParticle.yy",},"order":4,},
     {"id":{"name":"sShopPortal","path":"sprites/sShopPortal/sShopPortal.yy",},"order":1,},
     {"id":{"name":"oBossOtherBullets","path":"objects/oBossOtherBullets/oBossOtherBullets.yy",},"order":7,},
@@ -166,7 +165,6 @@
     {"roomId":{"name":"rShop","path":"rooms/rShop/rShop.yy",},},
     {"roomId":{"name":"rShopFinal","path":"rooms/rShopFinal/rShopFinal.yy",},},
     {"roomId":{"name":"FINAL","path":"rooms/FINAL/FINAL.yy",},},
-    {"roomId":{"name":"Camera0","path":"rooms/Camera0/Camera0.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -223,7 +221,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.3.574",
+    "IDEVersion": "2.3.4.577",
   },
   "resourceVersion": "1.4",
   "name": "GAME",

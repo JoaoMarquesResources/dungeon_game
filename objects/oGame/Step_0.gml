@@ -1,11 +1,15 @@
 /// @description desc
 show_debug_overlay(true);
+show_debug_message(camera);
 global.RoomEnemys = instance_number(pEnemy);
 
-if (ds_list_size(LayoutListRandom) == 0 && PortalCreateHelp = true)
+if (room != MenuScreen)
 {
-	PortalCreate = true;
-	PortalCreateHelp = false; //Tem de resetar no room start
+	if (ds_list_size(LayoutListRandom) == 0 && PortalCreateHelp = true)
+	{
+		PortalCreate = true;
+		PortalCreateHelp = false; //Tem de resetar no room start
+	}
 }
 
 if (global.RoomEnemys == 0 && PortalCreate && room != rShop)
@@ -15,7 +19,7 @@ if (global.RoomEnemys == 0 && PortalCreate && room != rShop)
 	if (delayToCreatePortal == 0)
 	{
 		var chooseChest = choose(oChest, oChest, oChest, oChest, oMimicChest);
-		if (camera != 3 && camera != 2 && camera != 5 && room != rShopFinal && room != FINAL && room != Camera0)
+		if (camera != 3 && camera != 2 && camera != 5 && room != rShopFinal && room != FINAL)
 		{
 			instance_create_layer(room_width / 2 - 30, room_height / 2, "Objects", oRoundPortal);
 			instance_create_layer(room_width / 2 + 30, room_height / 2, "Objects", oShopPortal);
@@ -343,7 +347,6 @@ switch (state)
 
 if (camera == 2)
 {
-	
 	switch (state)
 	{
 		case layout.ChooseRandom:
@@ -575,8 +578,6 @@ if (camera == 2)
 			SpawnEnemysDelay_ETC();
 		
 			break;
-		
-		default: show_debug_message("state");
 	}
 }
 
