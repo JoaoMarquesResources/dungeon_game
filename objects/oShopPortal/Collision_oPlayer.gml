@@ -1,5 +1,5 @@
 /// @description desc
-if (image_index >= 3)
+if (delayToColide <= 0)
 {
 	instance_create_layer(x, y, "Explosion", oEnteringPortal);
 	
@@ -9,4 +9,5 @@ if (image_index >= 3)
 
 	instance_deactivate_object(oPlayer);
 	instance_deactivate_object(oGun);
+	delayToColide = 51
 }

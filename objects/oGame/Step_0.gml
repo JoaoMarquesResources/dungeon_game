@@ -91,7 +91,7 @@ if (room == rShop)
 			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "You collected all the itens.", "And you passed the dungeon!", "Now you need the potion.", "Give me a minute, I will...", "prepare it!"];
 		}
 		else {
-			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "But you didn't collect...", "all the itens on my shop.", "I think you need to restart."];
+			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "But you didn't collect...", "all the itens on my store.", "I think you need to restart."];
 			fail = true;
 		}
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);

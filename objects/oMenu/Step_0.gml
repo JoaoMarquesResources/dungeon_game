@@ -31,7 +31,7 @@ if (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 1: TransitionStart(Camera1, seqFadeOut, seqFadeIn); break;
+		case 1: TransitionStart(Camera0, seqFadeOut, seqFadeIn); break;
  		case 0: game_end(); break;
 	}
 }

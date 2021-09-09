@@ -1,5 +1,6 @@
 /// @description desc
 delay--;
+delayToColide--;
 
 if (image_index == 4 && delay != 0)
 {
