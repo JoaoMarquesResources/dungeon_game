@@ -24,6 +24,7 @@
     {"id":{"name":"sBossBigBullet","path":"sprites/sBossBigBullet/sBossBigBullet.yy",},"order":5,},
     {"id":{"name":"FINAL","path":"rooms/FINAL/FINAL.yy",},"order":8,},
     {"id":{"name":"oHeart","path":"objects/oHeart/oHeart.yy",},"order":1,},
+    {"id":{"name":"sPlayerMorreu","path":"sprites/sPlayerMorreu/sPlayerMorreu.yy",},"order":8,},
     {"id":{"name":"oOtherBullets","path":"objects/oOtherBullets/oOtherBullets.yy",},"order":10,},
     {"id":{"name":"sMushroom","path":"sprites/sMushroom/sMushroom.yy",},"order":3,},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":6,},
@@ -228,7 +229,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.577",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "GAME",

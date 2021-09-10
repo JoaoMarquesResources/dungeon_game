@@ -11,7 +11,10 @@ if (room != MenuScreen)
 	if (camera == 2) Room = Camera3;
 	if (camera == 3) Room = Camera4;
 	if (camera == 4) Room = Camera5;
-
+	
+	PlayerDelayToDie = 90;
+	PlayerMorreu = false;
+	
 	global.midTransition = false;
 	global.createEnemys = false;
 	StopEnemysAppearingAnim = true;
@@ -99,7 +102,7 @@ if (room != MenuScreen)
 
 			//Escolher numero de layouts random
 			//irandom_range(4, 5)
-			for (var i = 1; i <= 1; i++)
+			for (var i = 1; i <= 0; i++)
 			{
 				Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 				pos2 = ds_list_find_index(LayoutList, Layout);
@@ -125,7 +128,7 @@ if (room != MenuScreen)
 	
 			//Escolher numero de layouts random
 			//irandom_range(3, 5)
-			for (var i = 1; i <= 1; i++)
+			for (var i = 1; i <= 0; i++)
 			{
 				Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 				pos2 = ds_list_find_index(LayoutList, Layout);
@@ -149,7 +152,7 @@ if (room != MenuScreen)
 	
 			//Escolher numero de layouts random
 			//irandom_range(3, 4)
-			for (var i = 1; i <= 1; i++)
+			for (var i = 1; i <= 0; i++)
 			{
 				Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 				pos2 = ds_list_find_index(LayoutList, Layout);
@@ -175,7 +178,7 @@ if (room != MenuScreen)
 	
 			//Escolher numero de layouts random
 			//irandom_range(3, 4)
-			for (var i = 1; i <= 1; i++)
+			for (var i = 1; i <= 0; i++)
 			{
 				Layout = ds_list_find_value(LayoutList, random(ds_list_size(LayoutList)));
 				pos2 = ds_list_find_index(LayoutList, Layout);

@@ -55,4 +55,20 @@ switch (state)
 		}
 		
 		break;
+		
+	case "dead":
+		velh = 0;
+		velv = 0;
+		if (!stopDying) {
+			instance_create_layer(x, y - 3, "Gun", oExplosion);
+			instance_destroy(oGun);
+			ScreenShake(5, 10);
+			sprite_index = sPlayerMorreu;
+			oGame.PlayerMorreu = true;
+			stopDying = true;
+		}
+		break;
+}
+if (global.PlayerHP <= 0) {
+	state = "dead";
 }

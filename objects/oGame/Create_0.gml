@@ -5,6 +5,9 @@ global.iCamera = instance_create_layer(0, 0, layer, oCamera);
 if (room != MenuScreen)
 {
 	atingiuPlayer = false;
+	
+	PlayerDelayToDie = 90;
+	PlayerMorreu = false;
 
 	showUI = false;
 
@@ -31,7 +34,7 @@ if (room != MenuScreen)
 	global.final = false;
 	cenaFinal = false;
 
-	global.PlayerHP = 6;
+	global.PlayerHP = 8;
 	global.PlayerHpMax = global.PlayerHP;
 	global.playerMoney = 0;
 

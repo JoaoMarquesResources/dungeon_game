@@ -51,7 +51,7 @@ if (room == rShop)
 {
 	if (CreateLeaf && shop == 1)
 	{
-		oMagoNPC.myText = ["HI, I'm Isaac and...", "Welcome to this DUNGEON!", "This place is DANGEROUS...", "...so be careful.", "You can buy what you want!"];
+		oMagoNPC.myText = ["This place is DANGEROUS...", "...so be careful.", "You can buy what you want!"];
 		instance_create_layer(124, 28, "Items", oLeaf);
 		CreateLeaf = false;
 	}
@@ -954,14 +954,24 @@ if (camera == 4)
 	}
 }
 
+if (PlayerMorreu) {
+	PlayerDelayToDie--;
+	
+	if (PlayerDelayToDie <= 0) {
+		TransitionStart(MenuScreen, seqFadeOut, seqFadeIn);
+		PlayerMorreu = false;
+		instance_destroy(oGame);
+	}
+}
+
 if (global.final)
 {
 	var target = rShopFinal;
 
 	TransitionStart(target, seqFadeOut, seqFadeIn);
 	
-	instance_deactivate_object(oPlayer);
-	instance_deactivate_object(oGun);
+	//instance_deactivate_object(oPlayer);
+	//instance_deactivate_object(oGun);
 	
 	cenaFinal = true;
 	global.final = false;

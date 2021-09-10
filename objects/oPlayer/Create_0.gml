@@ -13,6 +13,8 @@ inputDirection = 0;
 velh = 0;
 velv = 0;
 
+stopDying = false;
+
 invulnerable = 0;
 IsInvulnerable = false;
 flash = 0;
