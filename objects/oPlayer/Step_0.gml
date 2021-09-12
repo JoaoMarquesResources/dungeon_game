@@ -10,6 +10,7 @@ roll = mouse_check_button_pressed(mb_right);
 invulnerable = max(invulnerable - 1, 0);
 flash = max(flash - 0.05, 0);
 
+if (state == "rolling") instance_deactivate_object(oGun);
 switch (state)
 {
 	case "normal":
@@ -30,10 +31,12 @@ switch (state)
 		}
 		if (chest && place_meeting(x, y, oMimicChest)) global.abrirMimicChest = true;
 		
-		if (roll && rolling && rollDelay2 <= 0 && rolling)
-		{
-			inputDirection = point_direction(0, 0, right - left, down - up); //Retorna os graus (dir = 0; esq = 180; up = 90; down = 270 etc);
-			state = "rolling";
+		if (room != rShopFinal) {
+			if (roll && rolling && rollDelay2 <= 0 && rolling)
+			{
+				inputDirection = point_direction(0, 0, right - left, down - up); //Retorna os graus (dir = 0; esq = 180; up = 90; down = 270 etc);
+				state = "rolling";
+			}
 		}
 		
 		break;
@@ -50,8 +53,9 @@ switch (state)
 		
 		if (rollDelay == 0)
 		{
+			instance_create_layer(x, y - 4, "Gun", oGun);
 			state = "normal";
-			rollDelay = 25;
+			rollDelay = 35;
 		}
 		
 		break;

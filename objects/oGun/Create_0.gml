@@ -1,5 +1,5 @@
 /// @description desc
-delay = 20;
+delay = 5;
 
 invulnerable = 0;
 IsInvulnerable = false;

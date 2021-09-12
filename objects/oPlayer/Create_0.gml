@@ -3,8 +3,8 @@ state = "normal";
 
 walkspd = 1;
 
-rollspd = 1.45;
-rollDelay = 25;
+rollspd = 1.40;
+rollDelay = 35;
 rollDelay2 = 0;
 rolling = true;
 

@@ -51,7 +51,7 @@ if (room == rShop)
 {
 	if (CreateLeaf && shop == 1)
 	{
-		oMagoNPC.myText = ["This place is DANGEROUS...", "...so be careful.", "You can buy what you want!"];
+		oMagoNPC.myText = ["You can buy what you want!"];
 		instance_create_layer(124, 28, "Items", oLeaf);
 		CreateLeaf = false;
 	}
@@ -75,7 +75,7 @@ if (room == rShop)
 	
 	if (CreateEgg && shop == 4)
 	{
-		oMagoNPC.myText = ["Be careful.", "In this dungeon exists...", "...a BIG enemy so...", "...take care."];
+		oMagoNPC.myText = ["Be careful.", "the next room will be...", "HARD!"];
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
 		if (instance_exists(oMushroom)) instance_destroy(oMushroom);
 		if (instance_exists(oCookie)) instance_destroy(oCookie);
@@ -87,11 +87,11 @@ if (room == rShop)
 	{
 		instance_destroy(oRoundPortal);
 		instance_destroy(oHeart);
-		if (ds_list_size(global.ItemsLista) >= 4) {
-			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "You collected all the itens.", "And you passed the dungeon!", "Now you need the potion.", "Give me a minute, I will...", "prepare it!"];
+		if (ds_list_size(global.ItemsLista) >= 5) {
+			oMagoNPC.myText = ["Wow, you defeat him!", "You collected all the itens,", "you brought the recipe,", "and you passed the dungeon!", "Now you need the potion.", "Give me a minute, I will...", "prepare it!"];
 		}
 		else {
-			oMagoNPC.myText = ["WOW, YOU DEFEAT HIM!", "But you didn't collect...", "all the itens on my store.", "I think you need to restart."];
+			oMagoNPC.myText = ["Wow, you defeat him!", "But you didn't collect...", "all the itens.", "I think you need to restart!"];
 			fail = true;
 		}
 		if (instance_exists(oLeaf)) instance_destroy(oLeaf);
@@ -117,21 +117,17 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(32, 48, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(56, 56, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(80, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(104, 56, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(128, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(28, 32, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(80, 68, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(132, 32, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(32, 48, "Enemys", oSkeletonEnemy);
-				instance_create_layer(56, 56, "Enemys", oNormalEnemy);
-				instance_create_layer(80, 64, "Enemys", oSkeletonEnemy);
-				instance_create_layer(104, 56, "Enemys", oNormalEnemy);
-				instance_create_layer(128, 48, "Enemys", oSkeletonEnemy);
+				instance_create_layer(28, 32, "Enemys", oNormalEnemy);
+				instance_create_layer(80, 68, "Enemys", oNormalEnemy);
+				instance_create_layer(132, 32, "Enemys", oNormalEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -157,19 +153,13 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(24, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(48, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(112, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(80, 68, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(24, 24, "Enemys", oNormalEnemy);
-				instance_create_layer(136, 24, "Enemys", oNormalEnemy);
-				instance_create_layer(48, 64, "Enemys", oSkeletonEnemy);
-				instance_create_layer(112, 64, "Enemys", oSkeletonEnemy);
+				instance_create_layer(80, 68, "Enemys", oSquare);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -195,17 +185,15 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(24, 56, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(80, 60, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 56, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(24, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(132, 64, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(24, 56, "Enemys", oSkeletonEnemy);
-				instance_create_layer(80, 64, "Enemys", oSquare);
-				instance_create_layer(136, 56, "Enemys", oSkeletonEnemy);
+				instance_create_layer(24, 64, "Enemys", oSkeletonEnemy);
+				instance_create_layer(132, 64, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -231,19 +219,23 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(24, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(24, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(28, 28, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(28, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(28, 68, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 28, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 68, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(24, 24, "Enemys", oSkeletonEnemy);
-				instance_create_layer(136, 24, "Enemys", oSkeletonEnemy);
-				instance_create_layer(136, 64, "Enemys", oSkeletonEnemy);
-				instance_create_layer(24, 64, "Enemys", oSkeletonEnemy);
+				instance_create_layer(28, 28, "Enemys", oNormalEnemy);
+				instance_create_layer(28, 48, "Enemys", oNormalEnemy);
+				instance_create_layer(28, 68, "Enemys", oNormalEnemy);
+				instance_create_layer(136, 28, "Enemys", oNormalEnemy);
+				instance_create_layer(136, 48, "Enemys", oNormalEnemy);
+				instance_create_layer(136, 68, "Enemys", oNormalEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -269,21 +261,17 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(24, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 24, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(80, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(136, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(24, 64, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(24, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(80, 68, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(136, 48, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(24, 24, "Enemys", oNormalEnemy);
-				instance_create_layer(136, 24, "Enemys", oNormalEnemy);
-				instance_create_layer(80, 72, "Enemys", oSquare);
-				instance_create_layer(136, 64, "Enemys", oNormalEnemy);
-				instance_create_layer(24, 64, "Enemys", oNormalEnemy);
+				instance_create_layer(24, 48, "Enemys", oSkeletonEnemy);
+				instance_create_layer(80, 68, "Enemys", oNormalEnemy);
+				instance_create_layer(136, 48, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
@@ -309,23 +297,15 @@ switch (state)
 		{
 			if (StopEnemysAppearingAnim)
 			{
-				instance_create_layer(32, 32, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(128, 32, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(128, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(32, 64, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(72, 48, "EnemysAppearingAnim", oEnemysAppearing);
-				instance_create_layer(88, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(28, 48, "EnemysAppearingAnim", oEnemysAppearing);
+				instance_create_layer(132, 48, "EnemysAppearingAnim", oEnemysAppearing);
 				StopEnemysAppearingAnim = false;
 			}
 			
 			if (global.createEnemys)
 			{
-				instance_create_layer(32, 32, "Enemys", oNormalEnemy);
-				instance_create_layer(128, 32, "Enemys", oNormalEnemy);
-				instance_create_layer(128, 64, "Enemys", oNormalEnemy);
-				instance_create_layer(32, 64, "Enemys", oNormalEnemy);
-				instance_create_layer(72, 48, "Enemys", oSkeletonEnemy);
-				instance_create_layer(88, 48, "Enemys", oSkeletonEnemy);
+				instance_create_layer(28, 52, "Enemys", oSquare);
+				instance_create_layer(132, 48, "Enemys", oSkeletonEnemy);
 				delay = 30;
 				global.createEnemys = false;
 			}
