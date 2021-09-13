@@ -1,2 +1,0 @@
-/// @description desc
-global.playerMoney++;

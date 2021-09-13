@@ -4,6 +4,7 @@ global.midTransition = false;
 //Called whenever you want to go from one room to another, using any combination of in/out sequences
 function TransitionStart(_roomTarget, _typeOut, _typeIn)
 {
+	global.Transition = true;
 	if (!global.midTransition)
 	{
 		//show_message("!global.midTransition");
@@ -35,7 +36,7 @@ function TransitionChangeRoom()
 //Called as a moment at the end of an "In" transition sequence
 function TransitionFinished()
 {
+	global.Transition = false;
 	layer_sequence_destroy(self.elementID);
 	global.midTransition = false;
-	return true;
 }

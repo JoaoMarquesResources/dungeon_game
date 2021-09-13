@@ -6,7 +6,7 @@ state = "normal";
 velv = 0;
 velh = 0;
 
-entityFragmentCount = irandom_range(3, 5);
+entityFragmentCount = irandom_range(4, 6);
 
 dirTiro = point_direction(x, y, oPlayer.x, oPlayer.y - 2);
 

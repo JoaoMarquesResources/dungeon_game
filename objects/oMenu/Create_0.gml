@@ -1,6 +1,5 @@
 /// @description desc
 text = "THE WIZARD DUNGEON";
-
 gui_widht = room_width;
 gui_height = room_height;
 gui_margin = 25;

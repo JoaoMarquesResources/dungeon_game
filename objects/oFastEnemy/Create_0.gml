@@ -13,6 +13,6 @@ goToChaseTimer = 30;
 
 state = "chase";
 
-entityFragmentCount = irandom_range(3, 5);
+entityFragmentCount = irandom_range(4, 5);
 
 entityDropList = -1;

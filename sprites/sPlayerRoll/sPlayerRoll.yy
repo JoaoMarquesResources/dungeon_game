@@ -50,7 +50,7 @@
     "spriteId": {"name":"sPlayerRoll","path":"sprites/sPlayerRoll/sPlayerRoll.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 11.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

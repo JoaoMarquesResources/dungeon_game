@@ -20,6 +20,6 @@ var360_4 = 270;
 
 state = "chase";
 
-entityFragmentCount = irandom_range(1, 4);
+entityFragmentCount = irandom_range(3, 4);
 
 entityDropList = -1;

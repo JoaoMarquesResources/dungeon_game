@@ -1,6 +1,7 @@
 /// @description desc
 randomize();
 global.iCamera = instance_create_layer(0, 0, layer, oCamera);
+global.Transition = false;
 
 if (room != MenuScreen)
 {

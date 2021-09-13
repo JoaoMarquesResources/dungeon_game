@@ -5,10 +5,15 @@ left = keyboard_check(ord("A"));
 right = keyboard_check(ord("D"));
 chest = keyboard_check(ord("E"));
 buy = keyboard_check(ord("E"));
+restart = keyboard_check(ord("R"));
 roll = mouse_check_button_pressed(mb_right);
 
 invulnerable = max(invulnerable - 1, 0);
 flash = max(flash - 0.05, 0);
+
+if (restart) {
+	state = "dead";
+}
 
 if (state == "rolling") instance_deactivate_object(oGun);
 switch (state)
@@ -55,7 +60,7 @@ switch (state)
 		{
 			instance_create_layer(x, y - 4, "Gun", oGun);
 			state = "normal";
-			rollDelay = 35;
+			rollDelay = 30;
 		}
 		
 		break;
